@@ -1,50 +1,122 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block script %}
-    <script>
+    <script xmlns="http://www.w3.org/1999/html">
         document.getElementById("cont").classList.add("active");
     </script>
 {% endblock %}
 {% block style %}
-{#    <link rel="stylesheet" href='{% static "css/contact.css" %}'>#}
+    {#    <link rel="stylesheet" href='{% static "css/contact.css" %}'>#}
 {% endblock %}
 {% block content %}
-    <h1 style="margin-top:80px; margin-bottom:30px" align="center">Contact us</h1>
-    <section id="contact">
+
+    <div class="jumbotron">
+        <br><br><br>
+        <div class="container">
+
+            <div class="row-fluid">
+
+
+                <div class="col-sm-8">
+                    <iframe width="100%" height="350" frameborder="1" scrolling="no" marginheight="0" marginwidth="0"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12777.064305703272!2d10.1719818!3d36.8121435!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd34633300d0ef%3A0x1cc06688b4a20f7e!2sLa+Fayette%2C+Tunis!5e0!3m2!1sfr!2stn!4v1495733524173"></iframe>
+                </div>
+                <div class="col-sm-4">
+                    <h2>SOTEQ</h2>
+                    <address>
+                        <strong>Socité Tunisienne D'équipement</strong><br>
+                        Siège: 12 rue d'Irak lafayette-1002 Tunis<br>
+                        GSM: +216 28 100 018 - Tél: 71 289 077<br>
+                        Service Technico Commercial: 71 289 114<br>
+                        United Kingdon<br>
+                        Email: soteq.projet@gmail.com<br>
+                    </address>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+
+
+
+
+    <div class="container">
         <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <center><h2 class="span8"><strong>contact us</strong></h2></center>
 
-            <div class="formStyle">
-                <form name="htmlform" method="post">
+                <form action="" method="post" role="form" class="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                               data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                               data-rule="email" data-msg="Please enter a valid email"/>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                               data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject"/>
+                        <div class="validation"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" rows="5" data-rule="required"
+                                  data-msg="Please write something for us" placeholder="Message"></textarea>
+                        <div class="validation"></div>
+                    </div>
 
-                    <div class="col-md-12">
-                        <div class="form-group ">
-                            <div class="col-md-8">
-                            <input type="text" name="first_name" placeholder="NAME" class="form-control "
-                                   required>
-                                </div>
-                        </div>
-                        <div class="form-group ">
-                            <div class="col-md-8">
-                            <input type="email" name="email" placeholder="MAIL" class="form-control " required>
-                        </div>
-                            </div>
-                        <div class="form-group ">
-                            <div class="col-md-8">
-                            <textarea name="comments" placeholder="MESSAGE" class="form-control "
-                                      required></textarea>
-                                </div>
-                        </div>
-                        <div class="form-group ">
-                            <div class="col-md-8">
-                            <button name="send" type="submit" class="btn btn-default" class="form-control ">SEND</button>
-                       </div>
-                        </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
                     </div>
                 </form>
             </div>
-
         </div>
-    </section>
+    </div>
+
+
+
+
+
+
+    {#    <h1 style="margin-top:80px; margin-bottom:30px" align="center">Contact us</h1>#}
+    {#    <section id="contact">#}
+    {#        <div class="row">#}
+    {##}
+    {#            <div class="formStyle">#}
+    {#                <form name="htmlform" method="post">#}
+    {##}
+    {#                    <div class="col-md-12">#}
+    {#                        <div class="form-group ">#}
+    {#                            <div class="col-md-8">#}
+    {#                            <input type="text" name="first_name" placeholder="NAME" class="form-control "#}
+    {#                                   required>#}
+    {#                                </div>#}
+    {#                        </div>#}
+    {#                        <div class="form-group ">#}
+    {#                            <div class="col-md-8">#}
+    {#                            <input type="email" name="email" placeholder="MAIL" class="form-control " required>#}
+    {#                        </div>#}
+    {#                            </div>#}
+    {#                        <div class="form-group ">#}
+    {#                            <div class="col-md-8">#}
+    {#                            <textarea name="comments" placeholder="MESSAGE" class="form-control "#}
+    {#                                      required></textarea>#}
+    {#                                </div>#}
+    {#                        </div>#}
+    {#                        <div class="form-group ">#}
+    {#                            <div class="col-md-8">#}
+    {#                            <button name="send" type="submit" class="btn btn-default" class="form-control ">SEND</button>#}
+    {#                       </div>#}
+    {#                        </div>#}
+    {#                    </div>#}
+    {#                </form>#}
+    {#            </div>#}
+    {##}
+    {#        </div>#}
+    {#    </section>#}
 
 
 
