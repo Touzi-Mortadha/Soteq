@@ -1,0 +1,157 @@
+/** Your theme modifications here **/
+.promo
+{
+position:absolute;
+z-index:999;
+top:0;
+right:10px;
+
+
+}
+#mainImage img
+{
+max-height:450px;
+}
+.new
+{
+position:absolute;
+z-index:999;
+top:0;
+left:20px;
+
+
+}
+.promo img
+{
+width:80px !important;
+height:58px !important;
+}
+
+.imgpromo
+{
+width:80px !important;
+height:58px !important;
+}
+.blocnav
+{
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bd0505+0,d80f0f+47,bd0505+100 */
+background: #bd0505; /* Old browsers */
+background: -moz-linear-gradient(top,  #bd0505 0%, #d80f0f 47%, #bd0505 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #bd0505 0%,#d80f0f 47%,#bd0505 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #bd0505 0%,#d80f0f 47%,#bd0505 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bd0505', endColorstr='#bd0505',GradientType=0 ); /* IE6-9 */
+}
+.navHeader
+{
+    margin-top: 26px;
+}
+.navHeader a
+{
+    color: #000 !important;
+}
+.navHeader a:hover
+{
+    color: #fff !important;
+	background-color:#bd0505 !important;
+	text-decoration:none;
+}
+
+.img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img
+{
+	/*width:100% !important*/
+}
+
+.img-responsive1, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img
+{
+    width:100% !important
+}
+
+.car img
+{
+	/*height:200px !important;
+	border: 1px solid #f00;*/
+
+}
+.navbar-buttons1
+{
+position:absolute; top:-100px; right:0;
+}
+@media (max-width: 767px) 
+{
+.car img
+{
+height:auto !important;
+}
+.navbar-brand
+{
+float:none;
+width:100%;
+text-align:center !important;
+}
+}
+
+.navbar-nav > li > a > span {
+text-transform:none !important;
+font-size:12px;
+font-weight:normal !important;
+}
+.une
+{
+font-size:28px;
+}
+.recherche
+{
+color:#c70202;
+line-height:18px;
+text-transform:uppercase;
+}
+.recherche span
+{
+color:#bfbfbf !important;
+font-size:11px;
+}
+.search input, .search select
+{
+    margin-top: 18px;
+   /* padding:15px;*/
+    height:43px;
+}
+.bgchoisir
+{
+height:49px;
+line-height:50px;
+padding:0 15px;
+text-align:center;
+color:#FFFFFF;
+font-size:18px;
+text-transform:uppercase;
+background-color:#c70202;
+}
+.nav-tabs>li>a
+{
+border:0 !important;
+
+}
+.nav-tabs>li>a:hover
+{
+background:none;
+border:0 !important;
+border-radius:0;
+color:#c70202;
+}
+.padding
+{
+padding:20px 0;
+}
+#footer
+{
+margin-top:-30px;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus
+{
+background-color:#d50303 !important;
+}
+a.list-group-item.active>.badge, .nav-pills>.active>a>.badge
+{
+color:#d50303 !important;
+}
