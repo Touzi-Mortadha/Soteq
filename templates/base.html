@@ -2,7 +2,7 @@
 
 
 <!doctype html>
-<html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,12 +43,12 @@
 
                 <li id="abou"><a href="about_us.html">About us</a></li>
 
-                <li id="cont"><a href="contact.html">Contact</a></li>
+                <li id="cont"><a href="contact_us.html">Contact</a></li>
             </ul>
 
             {% block script %}
                 <script>
-                    $(".nav li").on("click", function (e) {
+                    $(".nav li").on("click", function () {
                         $(".nav li").removeClass("active");
                         $(this).addClass("active");
                     });
@@ -67,11 +67,22 @@
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+
                 <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+                <li><a href="#" class="btn btn-primary1" title="voir panier">
+                    &nbsp;
+                    <i class="fa fa-shopping-cart"></i> &nbsp;0 produit(s)
+                </a></li>
             </ul>
+
         </div>
     </div>
+
 </nav>
+
+
+
 
 {% block content %}
 
@@ -90,7 +101,6 @@ FOOTER
 
 
 -->
-
 
 
 </br></br>
@@ -162,14 +172,14 @@ FOOTER
     <div class="footer-bottom">
         <div class="container">
             <p class="pull-left"> Copyright © SOTEQ 2017. All right reserved. </p>
-{#            <div class="pull-right">#}
-{#                <ul class="nav nav-pills payments">#}
-{#                    <li><i class="fa fa-cc-visa"></i></li>#}
-{#                    <li><i class="fa fa-cc-mastercard"></i></li>#}
-{#                    <li><i class="fa fa-cc-amex"></i></li>#}
-{#                    <li><i class="fa fa-cc-paypal"></i></li>#}
-{#                </ul>#}
-{#            </div>#}
+            {#            <div class="pull-right">#}
+            {#                <ul class="nav nav-pills payments">#}
+            {#                    <li><i class="fa fa-cc-visa"></i></li>#}
+            {#                    <li><i class="fa fa-cc-mastercard"></i></li>#}
+            {#                    <li><i class="fa fa-cc-amex"></i></li>#}
+            {#                    <li><i class="fa fa-cc-paypal"></i></li>#}
+            {#                </ul>#}
+            {#            </div>#}
         </div>
     </div>
     <!--/.footer-bottom-->
