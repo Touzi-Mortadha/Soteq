@@ -6,4 +6,3 @@ admin.site.register(Produit)
 admin.site.register(categorie)
 admin.site.register(user)
 admin.site.register(Projet)
-
