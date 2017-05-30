@@ -25,8 +25,14 @@ def produit(request):
     # if query:
     #     queryset_list = recherche(query)
     queryset_list = Produit.objects.all()
+    number_of_object = queryset_list.count()
+    number_of_object_in_page = 8
 
-    paginator = Paginator(queryset_list, 8)  # Show 25 contacts per page
+    number_pagination = (int)((number_of_object-1)/number_of_object_in_page) + 1
+    s=''
+    for i in range(number_pagination):
+        s=s+'x'
+    paginator = Paginator(queryset_list, number_of_object_in_page)  # Show 25 contacts per page
 
     page_request_var = "page"
 
@@ -43,7 +49,7 @@ def produit(request):
 
     connected = is_connected(request)
     context = {
-        "object_list": queryset_list,
+        "number_page": s ,
         "connected": connected,
         "produit": queryset,
         "page_request_var": page_request_var,

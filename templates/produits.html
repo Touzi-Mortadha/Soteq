@@ -138,7 +138,7 @@
                            {{ produit.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">&laquo;</a>
                {% endif %}
 
-            {% for i in "xxx" %}
+            {% for i in number_page %}
                 {% if forloop.counter ==  produit.number %}
                     <a href="?{{ page_request_var }}=
                            {{ forloop.counter }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}" class="active">{{ forloop.counter }}</a>
