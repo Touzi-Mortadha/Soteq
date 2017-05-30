@@ -3,23 +3,131 @@
 {% block navbar %}
     {% if connected == "false" %}
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="http://127.0.0.1:8000/admin/login/?next=/admin/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="http://127.0.0.1:8000/admin/login/?next=/admin/"><span class="glyphicon glyphicon-log-in"></span>
+            Login</a></li>
     {% elif connected == "true" %}
         <li><a href="#" class="btn btn-primary1" title="voir panier">
-            <li><a href="http://127.0.0.1:8000/admin/logout/"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
-            <li><a href="#"><span class="fa fa-shopping-cart"></span> &nbsp;0 produit(s)</a></li>
-        </a></li>
+        <li><a href="http://127.0.0.1:8000/admin/logout/"><span class="glyphicon glyphicon-log-in"></span>Logout</a>
+        </li>
+        <li><a href="#"><span class="fa fa-shopping-cart"></span> &nbsp;0 produit(s)</a></li>
     {% endif %}
 {% endblock %}
-
-
-
+{% block style %}
+    <link href='{% static "css/bootstrap.css" %}' rel="stylesheet">
+    <link href='{% static "css/boot-business_produit.css" %}' rel="stylesheet">
+{#        <link href='{% static "css/test.css" %}' rel="stylesheet">#}
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            background: url('{% static "img/produit/content.png" %}');
+        }
+    </style>
+{% endblock %}
 
 {% block script %}
     <script>
         document.getElementById("prod").classList.add("active");
     </script>
+
+
 {% endblock %}
+
 {% block content %}
 
+<br><br>
+
+    <div class="container">
+        <div>
+            <br><br>
+            <div class="w3-container w3-teal">
+                <h1 style="text-align: center;"><strong>Societé Tunisienne D'équipement</strong></h1>
+            </div>
+            <br> <br>
+
+            <div class="w3-container">
+                <p> Vente tout équipements de recyclage de
+                    plastiques (broyeur a plastique, densificateur, granuleuse, affuteuse, balance
+                    ……etc.) station de lavage PET, sacheterie, unité d’emballage en carton ,machine
+                    de fabrication de goublets en carton ,
+                    unité de fabrication de carrelage, unité de fabrication de charbon, unité de
+                    fabrication de bargataire ( ligne de production des pipes PEHD), extraction des
+                    huiles essentielles ,matériels de confection ,boulangerie ,restauration et
+                    pâtisserie ……………….etc. </p>
+
+
+                <!-- Start: MAIN CONTENT -->
+
+                <div class="page-header">
+                    <h1>Nos produits</h1>
+                </div>
+                <div class="row">
+                    {% for obj in produit %}
+                        <div class="col-md-3">
+                            <div class="thumbnail" style="background: 	 	#F0F8FF">
+                                <div class="imgContainer">
+                                    <a href={{ obj.images.url }}>
+                                    <img src={{ obj.images.url }} alt="product" class="productImg">
+                                    </a>
+                                </div>
+                                <div class="caption">
+                                    <h6 style="color:#008080"><b><a href={{ obj.get_absolute_url }}> {{ obj.categorie }} : {{ obj.nom_produit }}</a></b></h6>
+                                    <p>
+                                        {{ obj.description|linebreaks|truncatechars:50 }}
+                                    </p>
+                                </div>
+                                <p>
+                                <div class=" widget-footer col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+                                    <div class="btn-group" role="group" aria-label="...">
+                                        <button class="btn btn-primary btn-md"><a href="#" style="font-size: 10px"><b>Buy
+                                            now</b></a>&nbsp;
+                                        </button>
+                                        <button class="btn  btn-md"><a
+                                                href="file:///home/jihene/Bureau/produits/product.html"
+                                                style="font-size: 10px"><b>Read more</b></a></button>
+                                    </div>
+                                </div>
+                            </p>
+                            </div>
+
+                        </div>
+
+
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="center">
+        <div class="pagination">
+            <span class="step-links">
+               {% if produit.has_previous %}
+                   <a href="?{{ page_request_var }}=
+
+
+                           {{ produit.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">&laquo;</a>
+               {% endif %}
+
+            {% for i in "xxx" %}
+                {% if forloop.counter ==  produit.number %}
+                    <a href="?{{ page_request_var }}=
+                           {{ forloop.counter }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}" class="active">{{ forloop.counter }}</a>
+                {% else %}
+                    <a href="?{{ page_request_var }}=
+                           {{ forloop.counter }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{ forloop.counter }}</a>
+                {% endif %}
+            {% endfor %}
+                {% if produit.has_next %}
+                    <a href="?{{ page_request_var }}=
+                    {{ produit.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">&raquo;</a>
+                {% endif %}
+            </span>
+        </div>
+    </div>
+         <span class="current">
+            Page {{ produit.number }} of {{ produit.paginator.num_pages }}.
+         </span>
+
 {% endblock content %}
+

@@ -2,8 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dc367e4-30e2-4b47-972f-aa1a70367c67" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media_cdn/9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media_cdn/9_tEJfhmX.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media_cdn/us.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media_cdn/us_GhD3bDy.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media_cdn/us_MevMVvZ.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/media_cdn/us_oju91nn.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/img/cnc.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/about_us.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soteq_project/settings.py" afterPath="$PROJECT_DIR$/Soteq_project/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soteq_project/urls.py" afterPath="$PROJECT_DIR$/Soteq_project/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soteq_project/views.py" afterPath="$PROJECT_DIR$/Soteq_project/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soteq/models.py" afterPath="$PROJECT_DIR$/soteq/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soteq/urls.py" afterPath="$PROJECT_DIR$/soteq/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soteq/views.py" afterPath="$PROJECT_DIR$/soteq/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/contact_us.html" afterPath="$PROJECT_DIR$/templates/contact_us.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/produits.html" afterPath="$PROJECT_DIR$/templates/produits.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,47 +35,46 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="40" column="72" lean-forward="false" selection-start-line="40" selection-start-column="72" selection-end-line="40" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="90" column="16" lean-forward="true" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
+            <state relative-caret-position="1800">
+              <caret line="90" column="22" lean-forward="false" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="produits.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="produits.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/produits.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="160">
+              <caret line="89" column="33" lean-forward="true" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
               <folding>
-                <element signature="e#625#631#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#h6#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#button#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#button#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact_us.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/contact_us.html">
+      <file leaf-file-name="footer.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/footer.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding>
-                <element signature="e#625#631#0#HTML" expanded="true" />
-                <marker date="1495903105084" expanded="false" signature="4051:4086" ph="..." />
-              </folding>
+            <state relative-caret-position="362">
+              <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/test.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -63,32 +82,8 @@
       <file leaf-file-name="projects.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/projects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding>
-                <element signature="e#625#631#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SAV.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/SAV.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding>
-                <element signature="e#625#631#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/soteq/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="740">
-              <caret line="37" column="8" lean-forward="false" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="8" />
+            <state relative-caret-position="360">
+              <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -97,33 +92,51 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/soteq/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+            <state relative-caret-position="460">
+              <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#54#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/soteq/urls.py">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+            <state relative-caret-position="99">
+              <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="108" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/soteq/admin.py">
+      <file leaf-file-name="SAV.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/SAV.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+              <caret line="6" column="29" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="boot-business_produit.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/boot-business_produit.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="98" column="21" lean-forward="true" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="produit_detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/produit_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="27" column="63" lean-forward="false" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,8 +146,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -147,6 +160,12 @@
       <find>favicon.ico</find>
       <find>favicon.i</find>
       <find>br</find>
+      <find>2.jp</find>
+      <find>2.j</find>
+      <find>2.jpg</find>
+      <find>thum</find>
+      <find>conten</find>
+      <find>footer</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -156,7 +175,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/templates/accueil.html" />
-        <option value="$PROJECT_DIR$/Soteq_project/views.py" />
         <option value="$PROJECT_DIR$/templates/Produit.html" />
         <option value="$PROJECT_DIR$/templates/Projects.html" />
         <option value="$PROJECT_DIR$/templates/Contact_us.html" />
@@ -167,20 +185,26 @@
         <option value="$PROJECT_DIR$/static/css/jquerysctipttop.css" />
         <option value="$PROJECT_DIR$/templates/about_us.html" />
         <option value="$PROJECT_DIR$/static/css/style.css" />
-        <option value="$PROJECT_DIR$/Soteq_project/urls.py" />
-        <option value="$PROJECT_DIR$/Soteq_project/settings.py" />
         <option value="$PROJECT_DIR$/soteq/admin.py" />
-        <option value="$PROJECT_DIR$/soteq/models.py" />
         <option value="$PROJECT_DIR$/soteq/migrations/search.py" />
         <option value="$PROJECT_DIR$/soteq/search.py" />
+        <option value="$PROJECT_DIR$/Soteq_project/views.py" />
         <option value="$PROJECT_DIR$/soteq/urls.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/templates/produits.html" />
-        <option value="$PROJECT_DIR$/templates/projects.html" />
         <option value="$PROJECT_DIR$/templates/SAV.html" />
+        <option value="$PROJECT_DIR$/soteq/other_function.py" />
+        <option value="$PROJECT_DIR$/Soteq_project/urls.py" />
+        <option value="$PROJECT_DIR$/templates/produit_detail.html" />
+        <option value="$PROJECT_DIR$/soteq/models.py" />
+        <option value="$PROJECT_DIR$/Soteq_project/settings.py" />
+        <option value="$PROJECT_DIR$/static/css/business-casual.css" />
         <option value="$PROJECT_DIR$/templates/contact_us.html" />
+        <option value="$PROJECT_DIR$/static/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/soteq/views.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/projects.html" />
+        <option value="$PROJECT_DIR$/static/css/boot-business_produit.css" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/produits.html" />
       </list>
     </option>
   </component>
@@ -212,7 +236,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -249,6 +272,38 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Soteq_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Soteq_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Soteq_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Soteq_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Soteq_project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -277,16 +332,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="soteq" />
+              <option name="myItemId" value="media_cdn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Soteq_project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Soteq_project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
+              <option name="myItemId" value="media_cdn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="5" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -294,7 +364,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Soteq-models" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Django 1.9/FINALE_Django/src" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -523,6 +593,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="-11" width="1315" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18126428" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -532,7 +603,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -541,7 +612,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -556,60 +627,12 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/footer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47580">
-          <caret line="2379" column="1" lean-forward="false" selection-start-line="2379" selection-start-column="1" selection-end-line="2379" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/about_us.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/contact_us.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="22" />
-          <folding>
-            <element signature="e#625#631#0#HTML" expanded="true" />
-            <marker date="1495903105084" expanded="false" signature="4051:4086" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/produits.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/projects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/soteq/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -643,21 +666,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/about_us.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/about_us.html" />
     <entry file="file://$PROJECT_DIR$/templates/contact_us.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <element signature="e#625#631#0#HTML" expanded="true" />
-            <marker date="1495903105084" expanded="false" signature="4051:4086" ph="..." />
+            <element signature="e#2076#2102#0#HTML" expanded="false" />
+            <element signature="e#5228#5255#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -689,7 +705,7 @@
         <state relative-caret-position="240">
           <caret line="12" column="36" lean-forward="false" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -742,25 +758,11 @@
     <entry file="file://$PROJECT_DIR$/templates/Produit.html" />
     <entry file="file://$PROJECT_DIR$/templates/Contact_us.html" />
     <entry file="file://$PROJECT_DIR$/templates/About_us.html" />
-    <entry file="file://$PROJECT_DIR$/Soteq_project/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/Base.html" />
     <entry file="file://$PROJECT_DIR$/templates/Projects.html" />
     <entry file="file://$PROJECT_DIR$/templates/produit.html" />
     <entry file="file://$PROJECT_DIR$/static/css/jquerysctipttop.css" />
     <entry file="file://$PROJECT_DIR$/static/css/bootstrap.min.css" />
-    <entry file="file://$PROJECT_DIR$/static/css/footer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2940">
-          <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/contact.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -769,124 +771,176 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/style.css" />
-    <entry file="file://$PROJECT_DIR$/templates/about_us.html">
+    <entry file="file://$PROJECT_DIR$/soteq/migrations/search.py" />
+    <entry file="file://$PROJECT_DIR$/soteq/search.py" />
+    <entry file="file://$PROJECT_DIR$/soteq/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        <state relative-caret-position="120">
+          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/about_us.html" />
+    <entry file="file://$PROJECT_DIR$/Soteq_project/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="14" column="80" lean-forward="false" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Soteq_project/urls.py">
+    <entry file="file://$PROJECT_DIR$/soteq/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="13" column="80" lean-forward="false" selection-start-line="13" selection-start-column="80" selection-end-line="13" selection-end-column="80" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Soteq_project/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="26" column="57" lean-forward="false" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+        <state relative-caret-position="113">
+          <caret line="26" column="45" lean-forward="false" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/soteq/migrations/search.py" />
-    <entry file="file://$PROJECT_DIR$/soteq/search.py" />
-    <entry file="file://$PROJECT_DIR$/soteq/urls.py">
+    <entry file="file://$PROJECT_DIR$/soteq/other_function.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/soteq/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        <state relative-caret-position="193">
+          <caret line="18" column="65" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="65" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/soteq/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="740">
-          <caret line="37" column="8" lean-forward="false" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="40" column="72" lean-forward="false" selection-start-line="40" selection-start-column="72" selection-end-line="40" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/produits.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#625#631#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/projects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#625#631#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/SAV.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="e#625#631#0#HTML" expanded="true" />
+            <element signature="e#0#21#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/contact_us.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="10" selection-end-line="3" selection-end-column="19" />
           <folding>
-            <element signature="e#625#631#0#HTML" expanded="true" />
-            <marker date="1495903105084" expanded="false" signature="4051:4086" ph="..." />
+            <element signature="e#2076#2102#0#HTML" expanded="false" />
+            <element signature="e#5228#5255#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/business-casual.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="62" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Soteq_project/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soteq/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/soteq/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+        <state relative-caret-position="460">
+          <caret line="26" column="38" lean-forward="false" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="90" column="16" lean-forward="true" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
+        <state relative-caret-position="1800">
+          <caret line="90" column="22" lean-forward="false" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/SAV.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="29" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/projects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/footer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/test.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/produit_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="27" column="63" lean-forward="false" selection-start-line="27" selection-start-column="63" selection-end-line="27" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/boot-business_produit.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="98" column="21" lean-forward="true" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="108" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/produits.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="89" column="33" lean-forward="true" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#h6#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#button#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#button#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

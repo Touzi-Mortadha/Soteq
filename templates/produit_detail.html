@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block navbar %}
+    {% if connected == "false" %}
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="http://127.0.0.1:8000/admin/login/?next=/admin/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    {% elif connected == "true" %}
+        <li><a href="#" class="btn btn-primary1" title="voir panier">
+            <li><a href="http://127.0.0.1:8000/admin/logout/"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
+            <li><a href="#"><span class="fa fa-shopping-cart"></span> &nbsp;0 produit(s)</a></li>
+        </a></li>
+    {% endif %}
+{% endblock %}
+
+
+
+
+{% block script %}
+    <script>
+        document.getElementById("prod").classList.add("active");
+    </script>
+{% endblock %}
+
+{% block content %}
+    <br><br>
+<h1>it works fine</h1>
+    {% if instance.images.url %}
+    <img src='{{ instance.images.url }}' class='img-responsive'/>
+    {% endif %}
+{% endblock content %}

@@ -7,8 +7,9 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('soteq.urls')),
+    # url(r'^', include('soteq.urls',namespace="soteq")),
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_URL)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

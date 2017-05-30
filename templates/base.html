@@ -1,6 +1,5 @@
 {% load staticfiles %}
 
-
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
@@ -26,6 +25,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
+{#            </button>#}
+{#                <a class="navbar-brand" href="#"><img src='{% static "img/soteq.jpg" %}' width="33px"></a>#}
+{#            </div>#}
             </button>
             <a class="navbar-brand" href="#">SOTEQ</a>
         </div>
@@ -92,7 +94,6 @@
 
 {% endblock content %}
 
-
 <!--
 
 
@@ -101,50 +102,54 @@ FOOTER
 
 -->
 
-
 </br></br>
 <footer>
-    <div class="footer" id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                    <h3> Lorem Ipsum </h3>
-                    <ul>
-                        <li><a href="#"> Lorem Ipsum </a></li>
-                        <li><a href="#"> Lorem Ipsum </a></li>
-                        <li><a href="#"> Lorem Ipsum </a></li>
-                        <li><a href="#"> Lorem Ipsum </a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                    <h3> Lorem Ipsum </h3>
-                    <ul>
-                        <li><a href="#"> Lorem Ipsum </a></li>
-                        <li><a href="#"> Lorem Ipsum </a></li>
-                        <li><a href="#"> Lorem Ipsum </a></li>
-                        <li><a href="#"> Lorem Ipsum </a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                    <h3> Lorem Ipsum </h3>
-                    <ul>
-                        <li><a href="#"> Lorem Ipsum </a></li>
-                        <li><a href="#"> Lorem Ipsum </a></li>
-                        <li><a href="#"> Lorem Ipsum </a></li>
-                        <li><a href="#"> Lorem Ipsum </a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
-                    <h3> Lorem Ipsum </h3>
-                    <ul>
-                        <li><a href="#"> Lorem Ipsum </a></li>
-                        <li><a href="#"> Lorem Ipsum </a></li>
-                        <li><a href="#"> Lorem Ipsum </a></li>
-                        <li><a href="#"> Lorem Ipsum </a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
-                    <h3> Lorem Ipsum </h3>
+    {% block footer %}
+    {% endblock %}
+</footer>
+{#</br></br>#}
+{#<footer>#}
+{#    <div class="footer" id="footer">#}
+{#        <div class="container">#}
+{#            <div class="row">#}
+{#                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">#}
+{#                    <h3> Lorem Ipsum </h3>#}
+{#                    <ul>#}
+{#                        <li><a href="#"> Lorem Ipsum </a></li>#}
+{#                        <li><a href="#"> Lorem Ipsum </a></li>#}
+{#                        <li><a href="#"> Lorem Ipsum </a></li>#}
+{#                        <li><a href="#"> Lorem Ipsum </a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">#}
+{#                    <h3> Lorem Ipsum </h3>#}
+{#                    <ul>#}
+{#                        <li><a href="#"> Lorem Ipsum </a></li>#}
+{#                        <li><a href="#"> Lorem Ipsum </a></li>#}
+{#                        <li><a href="#"> Lorem Ipsum </a></li>#}
+{#                        <li><a href="#"> Lorem Ipsum </a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">#}
+{#                    <h3> Lorem Ipsum </h3>#}
+{#                    <ul>#}
+{#                        <li><a href="#"> Lorem Ipsum </a></li>#}
+{#                        <li><a href="#"> Lorem Ipsum </a></li>#}
+{#                        <li><a href="#"> Lorem Ipsum </a></li>#}
+{#                        <li><a href="#"> Lorem Ipsum </a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">#}
+{#                    <h3> Lorem Ipsum </h3>#}
+{#                    <ul>#}
+{#                        <li><a href="#"> Lorem Ipsum </a></li>#}
+{#                        <li><a href="#"> Lorem Ipsum </a></li>#}
+{#                        <li><a href="#"> Lorem Ipsum </a></li>#}
+{#                        <li><a href="#"> Lorem Ipsum </a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">#}
+{#                    <h3> Lorem Ipsum </h3>#}
                     {#                    <ul>#}
                     {#                        <li>#}
                     {#                            <div class="input-append newsletter-box text-center">#}
@@ -153,24 +158,24 @@ FOOTER
                     {#                            </div>#}
                     {#                        </li>#}
                     {#                    </ul>#}
-                    <ul class="social">
-                        <li><a href="#"> <i class=" fa fa-facebook">   </i> </a></li>
-                        <li><a href="#"> <i class="fa fa-twitter">   </i> </a></li>
-                        <li><a href="#"> <i class="fa fa-google-plus">   </i> </a></li>
-                        <li><a href="#"> <i class="fa fa-pinterest">   </i> </a></li>
-                        <li><a href="#"> <i class="fa fa-youtube">   </i> </a></li>
-                    </ul>
-                </div>
-            </div>
-            <!--/.row-->
-        </div>
-        <!--/.container-->
-    </div>
-    <!--/.footer-->
-
-    <div class="footer-bottom">
-        <div class="container">
-            <p class="pull-left"> Copyright © SOTEQ 2017. All right reserved. </p>
+{#                    <ul class="social">#}
+{#                        <li><a href="#"> <i class=" fa fa-facebook">   </i> </a></li>#}
+{#                        <li><a href="#"> <i class="fa fa-twitter">   </i> </a></li>#}
+{#                        <li><a href="#"> <i class="fa fa-google-plus">   </i> </a></li>#}
+{#                        <li><a href="#"> <i class="fa fa-pinterest">   </i> </a></li>#}
+{#                        <li><a href="#"> <i class="fa fa-youtube">   </i> </a></li>#}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+{#            <!--/.row-->#}
+{#        </div>#}
+{#        <!--/.container-->#}
+{#    </div>#}
+{#    <!--/.footer-->#}
+{##}
+{#    <div class="footer-bottom">#}
+{#        <div class="container">#}
+{#            <p class="pull-left"> Copyright © SOTEQ 2017. All right reserved. </p>#}
             {#            <div class="pull-right">#}
             {#                <ul class="nav nav-pills payments">#}
             {#                    <li><i class="fa fa-cc-visa"></i></li>#}
@@ -179,10 +184,10 @@ FOOTER
             {#                    <li><i class="fa fa-cc-paypal"></i></li>#}
             {#                </ul>#}
             {#            </div>#}
-        </div>
-    </div>
-    <!--/.footer-bottom-->
-</footer>
+{#        </div>#}
+{#    </div>#}
+{#    <!--/.footer-bottom-->#}
+{#</footer>#}
 
 
 </body>
