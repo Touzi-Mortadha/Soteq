@@ -159,7 +159,7 @@
   line-height: 25px;
 }
 .counter {
-  display: block;  
+  display: block;
   padding-top: 25px;
 }
 .signin-with-list {
@@ -205,7 +205,7 @@ footer {
   margin-left: 25px;
 }
 .footer-divider {
-  border-top: 0;  
+  border-top: 0;
   border-bottom: 1px solid #333;
 }
 /* End: Bootbusiness specific CSS */

@@ -21,6 +21,33 @@
         body {
             background: url('{% static "img/produit/content.png" %}');
         }
+
+    .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+    .imgContainer:hover .middle {
+  opacity: 1;
+}
+    .image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+        .imgContainer:hover .image {
+        -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+  opacity: 0.3;
+}
+
     </style>
 {% endblock %}
 
@@ -64,10 +91,15 @@
                     {% for obj in produit %}
                         <div class="col-md-3">
                             <div class="thumbnail" style="background: 	 	#F0F8FF">
-                                <div class="imgContainer">
-                                    <a href={{ obj.images.url }}>
+                                <div class="imgContainer hover01 column">
+                                    <a href={{ obj.images.url }} class="image">
                                     <img src={{ obj.images.url }} alt="product" class="productImg">
                                     </a>
+                                  <div class="middle">
+                                            <a href={{ obj.images.url }}>
+                                                <button type="button" class="btn btn-success">View</button>
+                                             </a>
+                                  </div>
                                 </div>
                                 <div class="caption">
                                     <h6 style="color:#008080"><b><a href={{ obj.get_absolute_url }}> {{ obj.categorie }} : {{ obj.nom_produit }}</a></b></h6>
@@ -78,11 +110,10 @@
                                 <p>
                                 <div class=" widget-footer col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
                                     <div class="btn-group" role="group" aria-label="...">
-                                        <button class="btn btn-primary btn-md"><a href="#" style="font-size: 10px"><b>Buy
-                                            now</b></a>&nbsp;
+                                        <button class="btn btn-primary btn-md"><a href="#" style="font-size: 10px"><b>add to cart &nbsp;<span class="fa fa-shopping-cart"></span></b></a>&nbsp;
                                         </button>
                                         <button class="btn  btn-md"><a
-                                                href="file:///home/jihene/Bureau/produits/product.html"
+                                                href={{ obj.get_absolute_url }}
                                                 style="font-size: 10px"><b>Read more</b></a></button>
                                     </div>
                                 </div>
@@ -90,9 +121,6 @@
                             </div>
 
                         </div>
-
-
-
                     {% endfor %}
                 </div>
             </div>
