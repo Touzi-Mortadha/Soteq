@@ -12,7 +12,7 @@
  */
 
 /* Start : Override Bootstrap navigation */
-.navbar-inner, footer {
+.navbar-inner {
   border: none;
   padding: 15px 0;
   background: teal;

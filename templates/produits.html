@@ -85,7 +85,7 @@
                 <!-- Start: MAIN CONTENT -->
 
                 <div class="page-header">
-                    <h1>Nos produits</h1>
+                    <h1 align="center">Nos produits</h1>
                 </div>
                 <div class="row">
                     {% for obj in produit %}
@@ -112,9 +112,10 @@
                                     <div class="btn-group" role="group" aria-label="...">
                                         <button class="btn btn-primary btn-md"><a href="#" style="font-size: 10px"><b>add to cart &nbsp;<span class="fa fa-shopping-cart"></span></b></a>&nbsp;
                                         </button>
-                                        <button class="btn  btn-md"><a
+                                        <a
                                                 href={{ obj.get_absolute_url }}
-                                                style="font-size: 10px"><b>Read more</b></a></button>
+                                                style="font-size: 10px">
+                                        <button class="btn  btn-md"><b>Read more</b></button></a>
                                     </div>
                                 </div>
                             </p>
