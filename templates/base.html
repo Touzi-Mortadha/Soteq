@@ -34,15 +34,15 @@
 
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li id="ind"><a href="index.html">Accueil</a></li>
+                <li id="ind"><a href='{% url "index" %}'>Accueil</a></li>
 
-                <li id="sav"><a href="SAV.html">SAV</a></li>
+                <li id="sav"><a href='{% url "SAV" %}'"SAV.html">SAV</a></li>
 
-                <li id="proj"><a href="projects.html">Projects</a></li>
+                <li id="proj"><a href='{% url "projet" %}'>Projects</a></li>
 
-                <li id="prod"><a href="produits.html">Produits </a></li>
+                <li id="prod"><a href='{% url "produits" %}'>Produits </a></li>
 
-                <li id="cont"><a href="contact_us.html">Contact</a></li>
+                <li id="cont"><a href='{% url "contact" %}'>Contact</a></li>
             </ul>
 
             {% block script %}

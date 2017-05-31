@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .other_function import *
-
+from django.views.generic import TemplateView
 
 def index(request):
     connected = is_connected(request)
@@ -84,9 +84,13 @@ def projets(request):
     return render(request, "projects.html", context)
 
 
-def SAV(request):
-    connected = is_connected(request)
-    context = {
-        "connected": connected,
-    }
-    return render(request, "SAV.html", context)
+
+
+class SAV(TemplateView):
+    template_name = "SAV.html"
+# def SAV(request):
+#     connected = is_connected(request)
+#     context = {
+#         "connected": connected,
+#     }
+#     return render(request, "SAV.html", context)

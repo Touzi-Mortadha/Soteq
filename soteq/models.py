@@ -14,7 +14,11 @@ class Produit(models.Model):
     nom_produit = models.CharField(max_length=100)
     prix = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField()
-    images = models.ImageField(upload_to=upload_location)
+    images0 = models.ImageField(upload_to=upload_location)
+    images1 = models.ImageField(upload_to=upload_location,null=True, blank=True)
+    images2 = models.ImageField(upload_to=upload_location,null=True, blank=True)
+    images3 = models.ImageField(upload_to=upload_location,null=True, blank=True)
+    images4 = models.ImageField(upload_to=upload_location,null=True, blank=True)
     fichiers = models.FileField(null=True, blank=True)
 
     def __str__(self):

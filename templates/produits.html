@@ -92,11 +92,11 @@
                         <div class="col-md-3">
                             <div class="thumbnail" style="background: 	 	#F0F8FF">
                                 <div class="imgContainer hover01 column">
-                                    <a href={{ obj.images.url }} class="image">
-                                    <img src={{ obj.images.url }} alt="product" class="productImg">
+                                    <a href={{ obj.images0.url }} class="image">
+                                    <img src={{ obj.images0.url }} alt="product" class="productImg">
                                     </a>
                                   <div class="middle">
-                                            <a href={{ obj.images.url }}>
+                                            <a href={{ obj.images0.url }}>
                                                 <button type="button" class="btn btn-success">View</button>
                                              </a>
                                   </div>
@@ -118,7 +118,7 @@
                                         <button class="btn  btn-md"><b>Read more</b></button></a>
                                     </div>
                                 </div>
-                            </p>
+                                </p>
                             </div>
 
                         </div>
@@ -154,9 +154,9 @@
             </span>
         </div>
     </div>
-         <span class="current">
-            Page {{ produit.number }} of {{ produit.paginator.num_pages }}.
-         </span>
+    {#         <span class="current">#}
+    {#            Page {{ produit.number }} of {{ produit.paginator.num_pages }}.#}
+    {#         </span>#}
 
 {% endblock content %}
 
