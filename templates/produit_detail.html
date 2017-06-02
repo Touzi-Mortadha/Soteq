@@ -2,15 +2,14 @@
 {% load staticfiles %}
 {% block navbar %}
     {% if connected == "false" %}
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="http://127.0.0.1:8000/admin/login/?next=/admin/"><span class="glyphicon glyphicon-log-in"></span>
+        <li><a href='{% url "signup" %}'><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href='{% url "login" %}'><span class="glyphicon glyphicon-log-in"></span>
             Login</a></li>
     {% elif connected == "true" %}
         <li><a href="#" class="btn btn-primary1" title="voir panier">
-        <li><a href="http://127.0.0.1:8000/admin/logout/"><span class="glyphicon glyphicon-log-in"></span>Logout</a>
+        <li><a href='{% url "logout" %}'><span class="glyphicon glyphicon-log-in"></span>Logout</a>
         </li>
         <li><a href="#"><span class="fa fa-shopping-cart"></span> &nbsp;0 produit(s)</a></li>
-        </a></li>
     {% endif %}
 {% endblock %}
 
@@ -39,6 +38,13 @@
 
     <link href='{% static "css/body.css" %}' rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+      <style>
+ html, body{
+
+    font-family: 'Sansita', sans-serif;
+    }
+</style>
 
 {% endblock %}
 

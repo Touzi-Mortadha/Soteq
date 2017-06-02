@@ -4,16 +4,73 @@
 
 {% block navbar %}
     {% if connected == "false" %}
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="http://127.0.0.1:8000/admin/login/?next=/admin/"><span class="glyphicon glyphicon-log-in"></span>
+        <li><a href='{% url "signup" %}'><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href='{% url "login" %}'><span class="glyphicon glyphicon-log-in"></span>
             Login</a></li>
     {% elif connected == "true" %}
         <li><a href="#" class="btn btn-primary1" title="voir panier">
-        <li><a href="http://127.0.0.1:8000/admin/logout/"><span class="glyphicon glyphicon-log-in"></span>Logout</a>
+        <li><a href='{% url "logout" %}'><span class="glyphicon glyphicon-log-in"></span>Logout</a>
         </li>
         <li><a href="#"><span class="fa fa-shopping-cart"></span> &nbsp;0 produit(s)</a></li>
-        </a></li>
     {% endif %}
+{% endblock %}
+
+{% block style %}
+    <script src='{% static "JS/accueil.js" %}'></script>
+    <link href='{% static "css/acceuil/story.css" %}' rel='stylesheet' type='text/css'>
+    <link href='{% static "css/acceuil/accueil.css" %}' rel="stylesheet">
+    <link href='{% static "css/acceuil/presentation.css" %}' rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Buenard:700' rel='stylesheet' type='text/css'>
+<script src="http://pupunzi.com/mb.components/mb.YTPlayer/demo/inc/jquery.mb.YTPlayer.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+
+    <style type="text/css">
+
+
+
+    .video-section .pattern-overlay {
+background-color:white;
+padding: 20px 0 20px;
+min-height: 20px;
+/* Incase of overlay problems just increase the min-height*/
+}
+.video-section h1, .video-section h3{
+text-align:center;
+color:      #CD5C5C;
+}
+.video-section h1{
+font-size:50px;
+font-family:  fantasy;
+font-weight:bold;
+text-transform: uppercase;
+margin: 40px auto 0px;
+text-shadow: 1px 1px 1px #000;
+-webkit-text-shadow: 1px 1px 1px #000;
+-moz-text-shadow: 1px 1px 1px #000;
+}
+
+.video-section .buttonBar{display:none;}
+.player {font-size: 1px;}
+
+.ch-img-1 {
+	background-image: url('{% static "img/story.jpeg" %}');
+}
+.ch-img-2 {
+	background-image: url('{% static "img/story.jpeg" %}');
+}
+.ch-img-3 {
+	background-image: url('{% static "img/story.jpeg" %}');
+}
+.ch-img-4{
+	background-image: url('{% static "img/story.jpeg" %}');
+}
+
+
+</style>
+
+
 {% endblock %}
 
 
@@ -24,16 +81,219 @@
 {% endblock %}
 {% block content %}
 
-    <h1 style="margin-top:80px; margin-bottom:30px" align="center">Société Tunisienne D’équipement</h1>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="item active"><img src='{% static "img/1.jpg" %}' style="width:100%" alt="First slide">
+<section class="content-section video-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+       <h1> <img src='{% static "img/soteq.jpg" %}'>Societé Tunisienne D'équipement</h1>
+       </div>
+      </div>
+    </div>
+</section>
+
+
+
+
+        <section class="slide-wrapper">
+        <div class="container">
+            <div id="myCarousel" class="carousel slide">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                 </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item item1 active">
+                        <div class="fill" style=" background-color:#48c3af;">
+                            <div class="inner-content">
+                                <div class="carousel-img">
+                                    <img src="http://vocefalandoingles.com/wp-content/uploads/2016/09/sofa.png" alt="sofa" class="img img-responsive" />
+                                </div>
+                                <div class="carousel-desc">
+
+                                    <h2>Modern Designer Sofa</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit ipsum, scelerisque non semper eu, aliquet vel odio. Sed auctor id purus nec tristique. Donec euismod, urna vel dapibus tristique, dolor arcu ultrices lectus, nec pulvinar est turpis sit amet felis. Duis interdum purus quam, vitae cursus erat ornare at. Donec congue mi a ipsum tincidunt, imperdiet vehicula odio rutrum. Nam porta vulputate magna, id pretium lectus iaculis eu. Ut ut viverra libero.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item2">
+                        <div class="fill" style="background-color:#b33f4a;">
+                            <div class="inner-content">
+                                <div class="carousel-img">
+                                    <img src="http://cdn.homedit.com/wp-content/uploads/2011/08/137CLUB2ST.png" alt="white-sofa" class="img img-responsive" />
+                                </div>
+                                <div class="carousel-desc">
+
+                                    <h2>Vintage Style Sofa</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit ipsum, scelerisque non semper eu, aliquet vel odio. Sed auctor id purus nec tristique. Donec euismod, urna vel dapibus tristique, dolor arcu ultrices lectus, nec pulvinar est turpis sit amet felis. Duis interdum purus quam, vitae cursus erat ornare at. Donec congue mi a ipsum tincidunt, imperdiet vehicula odio rutrum. Nam porta vulputate magna, id pretium lectus iaculis eu. Ut ut viverra libero.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item3">
+                        <div class="fill" style="background-color:#7fc2f4;">
+                            <div class="inner-content">
+                                <div class="col-md-6">
+
+                                    <div class="carousel-img">
+                                        <img src="http://vocefalandoingles.com/wp-content/uploads/2016/09/sofa.png" alt="sofa" class="img img-responsive" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 text-left">
+                                    <div class="carousel-desc">
+
+                                        <h2>Stylish Sofa</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit ipsum, scelerisque non semper eu, aliquet vel odio. Sed auctor id purus nec tristique. Donec euismod, urna vel dapibus tristique, dolor arcu ultrices lectus, nec pulvinar est turpis sit amet felis. Duis interdum purus quam, vitae cursus erat ornare at. Donec congue mi a ipsum tincidunt, imperdiet vehicula odio rutrum. Nam porta vulputate magna, id pretium lectus iaculis eu. Ut ut viverra libero.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+<div class="row">
+<h1 class="text-center" s><a href="http://bootstraptema.ru/stuff/snippets_bootstrap/blocks/shutters_blocks/17-1-0-1894" target="_blank"><span style="color:     #CD5C5C ">Presentation</span></a></h1>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="box">
+                <div class="box-icon">
+                    <span ><img src='{% static "img/soteq.jpg" %}'></span>
+                </div>
+                <div class="info">
+                    <h4 class="text-center">
+Qui sommes nous ?</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis dolor soluta!</p>
+                    <a href='{% url "contact" %}' class="btn">Link</a>
+                </div>
+            </div>
+        </div>
+         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+            <div class="box">
+                <div class="box-icon">
+                    <span ><img src='{% static "img/soteq.jpg" %}'></span>
+                </div>
+                <div class="info">
+                    <h4 class="text-center">Nos produits</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis dolor soluta!</p>
+                    <a href='{% url "produits" %}' class="btn">Link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <br>
+<h1 class="text-center"><a href="http://bootstraptema.ru/stuff/snippets_bootstrap/blocks/shutters_blocks/17-1-0-1894" target="_blank"><span style="color:     #CD5C5C ">Success stories</span></a></h1>
+
+<ul class="ch-grid">
+                    <li>
+                        <div class="ch-item ch-img-1">
+                            <div class="ch-info-wrap">
+                                <div class="ch-info">
+                                    <div class="ch-info-front ch-img-1"></div>
+                                    <div class="ch-info-back">
+                                        <h4>story</h4>
+                                        <p>Lorem ipsum #1</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="ch-item ch-img-2">
+                            <div class="ch-info-wrap">
+                                <div class="ch-info">
+                                    <div class="ch-info-front ch-img-2"></div>
+                                    <div class="ch-info-back">
+                                        <h4>story</h4>
+                                        <p>Lorem ipsum #2</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="ch-item ch-img-3">
+                            <div class="ch-info-wrap">
+                                <div class="ch-info">
+                                    <div class="ch-info-front ch-img-3"></div>
+                                    <div class="ch-info-back">
+                                        <h4>story</h4>
+                                        <p>Lorem ipsum #3</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="ch-item ch-img-4">
+                            <div class="ch-info-wrap">
+                                <div class="ch-info">
+                                    <div class="ch-info-front ch-img-4"></div>
+                                    <div class="ch-info-back">
+                                      <h4>story</h4>
+                                        <p>Lorem ipsum #4</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{#    <h1 style="margin-top:80px; margin-bottom:30px" align="center">Société Tunisienne D’équipement</h1>#}
+{#    <div id="myCarousel" class="carousel slide" data-ride="carousel">#}
+{##}
+{#        <ol class="carousel-indicators">#}
+{#            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>#}
+{#            <li data-target="#myCarousel" data-slide-to="1"></li>#}
+{#            <li data-target="#myCarousel" data-slide-to="2"></li>#}
+{#        </ol>#}
+{#        <div class="carousel-inner">#}
+{#            <div class="item active"><img src='{% static "img/1.jpg" %}' style="width:100%" alt="First slide">#}
                 {#      <div class="container">#}
                 {#        <div class="carousel-caption">#}
                 {#          <h1>Slide 1</h1>#}
@@ -41,9 +301,9 @@
                 {#          <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>#}
                 {#        </div>#}
                 {#      </div>#}
-            </div>
-            <div class="item"><img src="http://lorempixel.com/1200/400/people" style="width:100%" data-src=""
-                                   alt="Second    slide">
+{#            </div>#}
+{#            <div class="item"><img src="http://lorempixel.com/1200/400/people" style="width:100%" data-src=""#}
+{#                                   alt="Second    slide">#}
                 {#      <div class="container">#}
                 {#        <div class="carousel-caption">#}
                 {#          <h1>Slide 2</h1>#}
@@ -51,9 +311,9 @@
                 {#          <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>#}
                 {#        </div>#}
                 {#      </div>#}
-            </div>
-            <div class="item"><img src="http://lorempixel.com/1200/400/abstract" style="width:100%" data-src=""
-                                   alt="Third slide">
+{#            </div>#}
+{#            <div class="item"><img src="http://lorempixel.com/1200/400/abstract" style="width:100%" data-src=""#}
+{#                                   alt="Third slide">#}
                 {#      <div class="container">#}
                 {#        <div class="carousel-caption">#}
                 {#          <h1>Slide 3</h1>#}
@@ -61,31 +321,31 @@
                 {#          <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>#}
                 {#        </div>#}
                 {#      </div>#}
-            </div>
-        </div>
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span
-                class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control"
-                                                                        href="#myCarousel" data-slide="next"><span
-            class="glyphicon glyphicon-chevron-right"></span></a></div>
-
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-36251023-1']);
-        _gaq.push(['_setDomainName', 'jqueryscript.net']);
-        _gaq.push(['_trackPageview']);
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-
-    {% for obj in object_list %}
-        <h1>{{ obj.nom_produit }}</h1>
-    {% endfor %}
+{#            </div>#}
+{#        </div>#}
+{#        <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span#}
+{#                class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control"#}
+{#                                                                        href="#myCarousel" data-slide="next"><span#}
+{#            class="glyphicon glyphicon-chevron-right"></span></a></div>#}
+{##}
+{#    <script type="text/javascript">#}
+{#        var _gaq = _gaq || [];#}
+{#        _gaq.push(['_setAccount', 'UA-36251023-1']);#}
+{#        _gaq.push(['_setDomainName', 'jqueryscript.net']);#}
+{#        _gaq.push(['_trackPageview']);#}
+{#        (function () {#}
+{#            var ga = document.createElement('script');#}
+{#            ga.type = 'text/javascript';#}
+{#            ga.async = true;#}
+{#            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';#}
+{#            var s = document.getElementsByTagName('script')[0];#}
+{#            s.parentNode.insertBefore(ga, s);#}
+{#        })();#}
+{#    </script>#}
+{##}
+{#    {% for obj in object_list %}#}
+{#        <h1>{{ obj.nom_produit }}</h1>#}
+{#    {% endfor %}#}
 
 
 {% endblock content %}

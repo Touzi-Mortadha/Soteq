@@ -68,6 +68,9 @@ TEMPLATES = [
         },
     },
 ]
+#redirection after authentification
+LOGIN_REDIRECT_URL = 'index'
+
 
 WSGI_APPLICATION = 'Soteq_project.wsgi.application'
 

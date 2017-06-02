@@ -11,6 +11,13 @@
     <link rel="stylesheet" href='{% static "css/footer.css" %}'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+      <style>
+ html, body{
+
+    font-family: 'Sansita', sans-serif;
+    }
+</style>
     {% block style %}
     {% endblock %}
 
@@ -66,9 +73,9 @@
             </form>
             <ul class="nav navbar-nav navbar-right">
                 {% block navbar %}
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href='{% url "logout" %}'><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href='{% url "login" %}'><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 
                     <li><a href="#" class="btn btn-primary1" title="voir panier">
                         &nbsp;
