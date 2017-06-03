@@ -3,11 +3,11 @@
 
 
 {% block navbar %}
-    {% if connected == "false" %}
+    {% if connected == False %}
         <li><a href='{% url "signup" %}'><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a href='{% url "login" %}'><span class="glyphicon glyphicon-log-in"></span>
             Login</a></li>
-    {% elif connected == "true" %}
+    {% elif connected == True %}
         <li><a href="#" class="btn btn-primary1" title="voir panier">
         <li><a href='{% url "logout" %}'><span class="glyphicon glyphicon-log-in"></span>Logout</a>
         </li>
