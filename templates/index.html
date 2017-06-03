@@ -1,20 +1,5 @@
 {% extends "base.html" %}
 {% load staticfiles %}
-
-
-{% block navbar %}
-    {% if connected == False %}
-        <li><a href='{% url "signup" %}'><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href='{% url "login" %}'><span class="glyphicon glyphicon-log-in"></span>
-            Login</a></li>
-    {% elif connected == True %}
-        <li><a href="#" class="btn btn-primary1" title="voir panier">
-        <li><a href='{% url "logout" %}'><span class="glyphicon glyphicon-log-in"></span>Logout</a>
-        </li>
-        <li><a href="#"><span class="fa fa-shopping-cart"></span> &nbsp;0 produit(s)</a></li>
-    {% endif %}
-{% endblock %}
-
 {% block style %}
     <script src='{% static "JS/accueil.js" %}'></script>
     <link href='{% static "css/acceuil/story.css" %}' rel='stylesheet' type='text/css'>
