@@ -73,14 +73,18 @@
             </form>
             <ul class="nav navbar-nav navbar-right">
                 {% block navbar %}
-                    <li><a href='{% url "logout" %}'><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 
-                    <li><a href='{% url "login" %}'><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-
-                    <li><a href="#" class="btn btn-primary1" title="voir panier">
-                        &nbsp;
-                        <i class="fa fa-shopping-cart"></i> &nbsp;0 produit(s)
-                    </a></li>
+                {% if user.is_authenticated %}
+                <li><a href="#" class="btn btn-primary1" title="voir panier">
+                <li><a href='{% url "logout" %}'><span class="glyphicon glyphicon-log-in"></span>Logout</a>
+                </li>
+                <li><a href="#"><span class="fa fa-shopping-cart"></span> &nbsp;0 produit(s)</a></li>
+                {% else %}
+                <li><a href='{% url "signup" %}'><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href='{% url "login" %}'><span class="glyphicon glyphicon-log-in"></span>
+                    Login</a></li>
+                {% endif %}
+                
                 {% endblock %}
             </ul>
 
