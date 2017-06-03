@@ -1,4 +1,4 @@
-soteq/__pycache__/admin.cpython-35.pyc
-soteq/__pycache__/urls.cpython-35.pyc
-soteq/__pycache__/views.cpython-35.pyc
-soteq/__pycache__/
+soteq/__pycache__/*
+Soteq_project/__pycache__/*
+soteq/migrations/__pycache__/*
+db.sqlite3

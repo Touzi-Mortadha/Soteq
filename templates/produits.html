@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block navbar %}
-    {% if connected == "false" %}
+    {% if connected == False %}
         <li><a href='{% url "signup" %}'><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
         <li><a href='{% url "login" %}'><span class="glyphicon glyphicon-log-in"></span>
             Login</a></li>
-    {% elif connected == "true" %}
+    {% elif connected == True %}
         <li><a href="#" class="btn btn-primary1" title="voir panier">
         <li><a href='{% url "logout" %}'><span class="glyphicon glyphicon-log-in"></span>Logout</a>
         </li>
@@ -21,7 +21,6 @@
     <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
       <style>
  html, body{
-
     font-family: 'Sansita', sans-serif;
     }
 </style>
@@ -31,7 +30,6 @@
         body {
             background: url('{% static "img/produit/content.png" %}');
         }
-
     .middle {
   transition: .5s ease;
   opacity: 0;
@@ -57,7 +55,6 @@
 	transform: scale(1.1);
   opacity: 0.3;
 }
-
     </style>
 {% endblock %}
 
@@ -98,7 +95,7 @@
                     <h1 align="center">Nos produits</h1>
                 </div>
                 <div class="row">
-                    {% for obj in produit %}
+                    {% for obj in object_list %}
                         <div class="col-md-3">
                             <div class="thumbnail" style="background: 	 	#F0F8FF">
                                 <div class="imgContainer hover01 column">
@@ -138,35 +135,22 @@
         </div>
     </div>
 
-    <div class="center">
-        <div class="pagination">
-            <span class="step-links">
-               {% if produit.has_previous %}
-                   <a href="?{{ page_request_var }}=
 
-
-                           {{ produit.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">&laquo;</a>
-               {% endif %}
-
-            {% for i in number_page %}
-                {% if forloop.counter ==  produit.number %}
-                    <a href="?{{ page_request_var }}=
-                           {{ forloop.counter }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}" class="active">{{ forloop.counter }}</a>
-                {% else %}
-                    <a href="?{{ page_request_var }}=
-                           {{ forloop.counter }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{ forloop.counter }}</a>
-                {% endif %}
-            {% endfor %}
-                {% if produit.has_next %}
-                    <a href="?{{ page_request_var }}=
-                    {{ produit.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">&raquo;</a>
-                {% endif %}
-            </span>
-        </div>
-    </div>
-    {#         <span class="current">#}
-    {#            Page {{ produit.number }} of {{ produit.paginator.num_pages }}.#}
-    {#         </span>#}
+    {# .... **Now the pagination section** .... #}
+        {% if is_paginated %}
+            <div class="pagination">
+                <span class="page-links">
+                    {% if page_obj.has_previous %}
+                        <a href="/produits?page={{ page_obj.previous_page_number }}">previous</a>
+                    {% endif %}
+                    <span class="page-current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                    </span>
+                    {% if page_obj.has_next %}
+                        <a href="/produits?page={{ page_obj.next_page_number }}">next</a>
+                    {% endif %}
+                </span>
+            </div>
+        {% endif %}
 
 {% endblock content %}
-
