@@ -13,13 +13,186 @@
     {% endif %}
 {% endblock %}
 
+{% block style %}
+    <link href='{% static "css/projet.css" %}' rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+      <style>
+ html, body{
 
+    font-family: 'Sansita', sans-serif;
+    }
+</style>
+
+
+{% endblock %}
 
 {% block script %}
     <script>
         document.getElementById("proj").classList.add("active");
     </script>
 {% endblock %}
+
+
 {% block content %}
+    <br> <br>
+  <div class="container">
+ <h1 style="text-align: center; font-size: 50px"><b>Societé Tunisienne D'équipement</b></h1>
+</div>
+<div class="container">
+ <h1> Nos objectifs :</h1>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="offer offer-default">
+        <div class="shape">
+          <div class="shape-text">
+            Soteq
+          </div>
+        </div>
+        <div class="offer-content">
+          <h3 class="lead">
+           <img src='{% static "img/soteq.jpg" %}' width="50px">
+          </h3>
+          <p >
+          <strong>Assistance a la recherche d’une idée de projet </strong><br><br><br>
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="offer offer-success">
+        <div class="shape">
+          <div class="shape-text">
+            Soteq
+          </div>
+        </div>
+        <div class="offer-content">
+          <h3 class="lead">
+            <img src='{% static "img/soteq.jpg" %}' width="50px">
+          </h3>
+          <p  ><strong>
+Aompagner les promoteurs dans les différentes phases de démarrage
+suivi et réalisation de leurs projets
+          </strong></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="offer offer-radius offer-primary">
+        <div class="shape">
+          <div class="shape-text">
+            Soteq
+          </div>
+        </div>
+        <div class="offer-content">
+          <h3 class="lead">
+            <img src='{% static "img/soteq.jpg" %}' width="50px">
+          </h3>
+          <p><strong>Accorder une formation technique complémentaire au promoteurs</strong><br><br><br>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="offer offer-info">
+        <div class="shape">
+          <div class="shape-text">
+            Soteq
+          </div>
+        </div>
+        <div class="offer-content">
+          <h3 class="lead">
+           <img src='{% static "img/soteq.jpg" %}' width="50px">
+          </h3>
+          <p>
+          <strong>Accompagner et assister les promoteurs au niveau des démarches administratives</strong><br><br>
+          </p>
+        </div>
+      </div>
+    </div>
+   <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+
+      </div>
+  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="offer offer-success">
+        <div class="shape">
+          <div class="shape-text">
+            Soteq
+          </div>
+        </div>
+        <div class="offer-content">
+          <h3 class="lead">
+            <img src='{% static "img/soteq.jpg" %}' width="50px">
+          </h3>
+          <p  ><strong>
+Assurer aux promoteurs ayant réalisés leurs projets un suivi post-création
+          </strong></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="offer offer-radius offer-primary">
+        <div class="shape">
+          <div class="shape-text">
+            Soteq
+          </div>
+        </div>
+        <div class="offer-content">
+          <h3 class="lead">
+            <img src='{% static "img/soteq.jpg" %}' width="50px">
+          </h3>
+          <p><strong>Assistance pour le dossier de financement.</strong><br><br>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+   <br><br>
+
+<div class ="main-container">
+
+<div class=" highlight" style="margin-left:300px;">
+<h2 style="font-size: 40px">Liste des projets</h2>
+  <div class="row">
+
+
+        <img src='{% static "img/soteq.jpg" %}' width="50px">
+        <ul>
+            <li>confection cuivre et textile</li>
+            <li>moulin</li>
+            <li>tout type de menuiserie</li>
+            <li>recyclage de plastique</li>
+            <li>unité de formage de tôle</li>
+             <li>chaîne de production aliment poisson</li>
+            <li>chaîne de production aliment Bétail</li>
+            <li>Unité de fabrication de charbon</li>
+             <li>marbrerie</li>
+            <li>machine de fabrication de glace alimentaire</li>
+            <li>unité de presse à tomate séchée</li>
+            <li>unité de fabrication de sachet en plastique</li>
+            <li>unité de broyage et de recyclage d'aluminium</li>
+             <li>unité de recyclage de déchet textile</li>
+            <li>tôlerie et mécanique</li>
+            <li>matériels géophysiques</li>
+             <li>unité de mise en bouteille</li>
+            <li>unité cosmétique et détergents</li>
+             <li>station de lavage automatique</li>
+            <li>nettoyage à sec et buanderie</li>
+            <li>boulangerie et pâtisserie</li>
+            <li>tour mécanique et fraiseuse</li>
+            <li>vulcanisateur et réparation des roues</li>
+            <li>unité de traitement des eaux</li>
+        </ul>
+        </div>
+
+    </div>
+
+  </div>
+
+
+
 
 {% endblock content %}

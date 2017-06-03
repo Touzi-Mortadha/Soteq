@@ -1,0 +1,131 @@
+.main-container{
+    
+background: 	#008080 ; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left,  #008080 , #abcd6d); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left,  #008080 , #abcd6d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+       
+    }
+.highlight  {
+    width: 700px;
+    color: white;
+    background: rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    padding: 1%;
+    
+	}
+    
+.highlight img {
+    
+    float: left;
+    width: 100px;
+    height: 100px; 
+    margin: 10px;
+    }
+    
+.highlight ul {
+    list-style-image: url('http://icons.iconarchive.com/icons/yusuke-kamiyamane/fugue/16/tick-small-icon.png');
+    margin-left: 1%;
+    float: left; 
+    clear: right;
+   
+    }
+.highlight li {
+   font-size:20px;
+   
+    }
+    
+.highlight button {
+   margin-left: 1%;
+    float: right;
+    }
+
+.highlight h1,h2,h3,h4,h5,h6 {
+    padding-bottom: 2%;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.41);
+    font-size:20px;
+    text-align : center;
+    text-transform: uppercase;
+    }
+    
+.highlight p {
+    text-align: justify;
+    }
+
+.shape{    
+    border-style: solid; border-width: 0 60px 60px 0; float:right; height: 0px; width: 0px;
+    -webkit-transform: rotate(360deg);  
+    -moz-transform: rotate(360deg);  
+    -o-transform: rotate(360deg);  
+    transform: rotate(360deg); 
+}
+.shape-text{
+    color:#fff; font-size:13px; font-weight:bold; position:relative; right:-22px; top:-3px; white-space: nowrap;
+	-ms-transform:rotate(30deg); /* IE 9 */
+	-o-transform: rotate(360deg);  /* Opera 10.5 */
+	-webkit-transform:rotate(46deg); /* Safari and Chrome */
+	transform:rotate(46deg);
+}
+.offer{
+	background:#fff; border:1px solid #ddd; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: 15px 0; overflow:hidden;
+}
+.shape {
+	border-color: rgba(255,255,255,0)  #008080 rgba(255,255,255,0) rgba(255,255,255,0);
+}
+.offer-radius{
+	border-radius:7px;
+}
+.offer-danger {	border-color:  #008080; }
+.offer-danger .shape{
+	border-color: transparent  #008080 transparent transparent;
+}
+.offer-success {	border-color:  ; }
+.offer-success .shape{
+	border-color: transparent  #008080 transparent transparent;
+}
+.offer-default {	border-color: ; }
+.offer-default .shape{
+	border-color: transparent  #008080 transparent transparent;
+}
+.offer-primary {	border-color: ; }
+.offer-primary .shape{
+	border-color: transparent #008080 transparent transparent;
+}
+.offer-info {	border-color:  ; }
+.offer-info .shape{
+	border-color: transparent  #008080 transparent transparent;
+}
+.offer-warning {	border-color:; }
+.offer-warning .shape{
+	border-color: transparent #f0ad4e transparent transparent;
+}
+
+.offer-content{
+	padding:0 20px 10px;
+}
+@media (min-width: 487px) {
+  .container {
+    max-width: 750px;
+  }
+  .col-sm-6 {
+    width: 50%;
+  }
+}
+@media (min-width: 900px) {
+  .container {
+    max-width: 970px;
+  }
+  .col-md-4 {
+    width: 33.33333333333333%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  }
+}
+
