@@ -1,96 +1,54 @@
 from django.shortcuts import render, get_object_or_404
 from .models import *
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .other_function import *
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView,ListView
 
-def index(request):
-    connected = is_connected(request)
-
-    query = request.POST.get("content")
-
-    queryset_list = {}
-    if query:
-        queryset_list = recherche(query)
-    context = {
-        "connected": connected,
-        "object_list": queryset_list,
-    }
-    return render(request, "index.html", context)
+class index_view(TemplateView):
+    template_name = "index.html"
+    def get_context_data(self, **kwargs):
+        context = super(index_view, self).get_context_data(**kwargs)
+        context['connected'] = self.request.user.is_authenticated()
+        context['object_list']=self.request.POST.get("content")
+        return context
 
 
-def produit(request):
-    # query = request.POST.get("content")
-    # queryset_list = {}
-    # if query:
-    #     queryset_list = recherche(query)
-    queryset_list = Produit.objects.all()
-    number_of_object = queryset_list.count()
-    number_of_object_in_page = 8
-
-    number_pagination = (int)((number_of_object-1)/number_of_object_in_page) + 1
-    s=''
-    for i in range(number_pagination):
-        s=s+'x'
-    paginator = Paginator(queryset_list, number_of_object_in_page)  # Show 25 contacts per page
-
-    page_request_var = "page"
-
-    page = request.GET.get(page_request_var)
-
-    try:
-        queryset = paginator.page(page)
-    except PageNotAnInteger:
-        # If page is not an integer, deliver first page.
-        queryset = paginator.page(1)
-    except EmptyPage:
-        # If page is out of range (e.g. 9999), deliver last page of results.
-        queryset = paginator.page(paginator.num_pages)
-
-    connected = is_connected(request)
-    context = {
-        "number_page": s ,
-        "connected": connected,
-        "produit": queryset,
-        "page_request_var": page_request_var,
-    }
-    return render(request, "produits.html", context)
+class produits_view(ListView):
+    template_name="produits.html"
+    model=Produit
+    paginate_by = 3
+    def get_context_data(self, **kwargs):
+        context = super(produits_view, self).get_context_data(**kwargs)
+        context['connected'] = self.request.user.is_authenticated()
+        return context
 
 
-def produit_detail(request, id=None):
-    instance = get_object_or_404(Produit, id_produit=id)
-    connected = is_connected(request)
-    context = {
-        "connected": connected,
-        "instance": instance,
-    }
-    return render(request, "produit_detail.html", context)
+class projects_view(TemplateView):
+    template_name = "projects.html"
+    def get_context_data(self, **kwargs):
+        context = super(projects_view, self).get_context_data(**kwargs)
+        context['connected'] = self.request.user.is_authenticated()
+        return context
 
-
-def contact(request):
-
-    connected = is_connected(request)
-    context = {
-        "connected": connected,
-    }
-    return render(request, "contact_us.html", context)
-
-
-def projets(request):
-    connected = is_connected(request)
-    context = {
-        "connected": connected,
-    }
-    return render(request, "projects.html", context)
-
-
-
-
-class SAV(TemplateView):
+class SAV_view(TemplateView):
     template_name = "SAV.html"
-# def SAV(request):
-#     connected = is_connected(request)
-#     context = {
-#         "connected": connected,
-#     }
-#     return render(request, "SAV.html", context)
+    def get_context_data(self, **kwargs):
+        context = super(SAV_view, self).get_context_data(**kwargs)
+        context['connected'] = self.request.user.is_authenticated()
+        return context
+
+class contact_view(TemplateView):
+    template_name = "contact_us.html"
+    def get_context_data(self, **kwargs):
+        context = super(contact_view, self).get_context_data(**kwargs)
+        context['connected'] = self.request.user.is_authenticated()
+        return context
+
+
+class produit_detail_view(TemplateView):
+    template_name = "produit_detail.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(produit_detail_view, self).get_context_data(**kwargs)
+        context['connected'] = self.request.user.is_authenticated()
+        context['instance'] = get_object_or_404(Produit, id_produit=self.kwargs['id'])
+        return context
