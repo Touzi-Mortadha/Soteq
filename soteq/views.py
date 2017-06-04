@@ -13,7 +13,8 @@ class index_view(TemplateView):
 class produits_view(ListView):
     template_name="produits.html"
     model=Produit
-    paginate_by = 3
+    paginate_by = 8
+
 
 class projects_view(TemplateView):
     template_name = "projects.html"

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load self_defined_filters %}
 
 {% block style %}
     <link href='{% static "css/bootstrap.css" %}' rel="stylesheet">
@@ -126,20 +127,32 @@
 
 
     {# .... **Now the pagination section** .... #}
+    <div class="center">
         {% if is_paginated %}
             <div class="pagination">
+              <span class="step-links">
                 <span class="page-links">
                     {% if page_obj.has_previous %}
-                        <a href="/produits?page={{ page_obj.previous_page_number }}">previous</a>
+                        <a href="/produits?page={{ page_obj.previous_page_number }}">&laquo;</a>
                     {% endif %}
-                    <span class="page-current">
-                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-                    </span>
+
+
+                    {% for i in page_obj.paginator.num_pages|iternum %}
+                                    {% if forloop.counter ==  page_obj.number %}
+                                        <a href="?{{ page_request_var }}=
+                                               {{ forloop.counter }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}" class="active">{{ forloop.counter }}</a>
+                                    {% else %}
+                                        <a href="?{{ page_request_var }}=
+                                               {{ forloop.counter }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{ forloop.counter }}</a>
+                                    {% endif %}
+                                {% endfor %}
                     {% if page_obj.has_next %}
-                        <a href="/produits?page={{ page_obj.next_page_number }}">next</a>
+                        <a href="/produits?page={{ page_obj.next_page_number }}">&raquo;</a>
                     {% endif %}
                 </span>
+              </span>
             </div>
         {% endif %}
+    </div>
 
 {% endblock content %}
