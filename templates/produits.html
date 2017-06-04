@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load staticfiles %}
-{% load self_defined_filters %}
+{% load self_defined_filters%}
 
 {% block style %}
     <link href='{% static "css/bootstrap.css" %}' rel="stylesheet">
@@ -136,16 +136,14 @@
                         <a href="/produits?page={{ page_obj.previous_page_number }}">&laquo;</a>
                     {% endif %}
 
-
                     {% for i in page_obj.paginator.num_pages|iternum %}
                                     {% if forloop.counter ==  page_obj.number %}
-                                        <a href="?{{ page_request_var }}=
-                                               {{ forloop.counter }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}" class="active">{{ forloop.counter }}</a>
+                                        <a href="#" class="active">{{ forloop.counter }}</a>
                                     {% else %}
-                                        <a href="?{{ page_request_var }}=
-                                               {{ forloop.counter }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{ forloop.counter }}</a>
+                                        <a href="/produits?page= {{forloop.counter}} ">{{ forloop.counter }}</a>
                                     {% endif %}
                                 {% endfor %}
+
                     {% if page_obj.has_next %}
                         <a href="/produits?page={{ page_obj.next_page_number }}">&raquo;</a>
                     {% endif %}
