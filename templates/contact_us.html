@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
+{% block esp %}
+<br><br><br>
 
+{% endblock %}
 
 {% block script %}
     <script xmlns="http://www.w3.org/1999/html">
@@ -10,7 +13,7 @@
 {% endblock %}
 
 {% block style %}
-    <link href='{% static "css/business-casual.css" %}' rel="stylesheet">
+
    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
       <style>
  html, body{
@@ -20,12 +23,6 @@
 </style>
 
 
-
-    <style>
-    body{
-        background: url('{% static "img/contact/2.jpg" %}') no-repeat center center fixed;
-    }
-    </style>
 {% endblock %}
 
 
@@ -33,20 +30,18 @@
 {% block content %}
     <br> <br>
 
-    <div class="brand">Contact Us</div>
-    <div class="address-bar">Societé Tunisienne D'équipement</div>
 
 
 
     <div class="container">
 
         <div class="row">
-            <div class="box">
+            <div>
                 <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Contact <strong> SOTEQ</strong>
-                    </h2>
-                    <hr>
+
+
+
+
                 </div>
 
                 <div class="col-sm-8">
@@ -54,16 +49,18 @@
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12777.064305703272!2d10.1719818!3d36.8121435!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd34633300d0ef%3A0x1cc06688b4a20f7e!2sLa+Fayette%2C+Tunis!5e0!3m2!1sfr!2stn!4v1495733524173"></iframe>
                 </div>
                 <div class="col-md-4">
-                    <p style="text-align: center"><img src='{% static "img/contact/contact2.jpg" %}' width="300px"></p>
+                  <br><br><br><br>
+                    <p style="text-align: center">
                     <br>
-                    <p>Siège: <strong>12 rue d'Irak lafayette-1002 Tunis</strong>
-                    </p>
-                    <p>GSM: <strong>+216 28 100 018 </strong>
-                    </p>
-                    <p>Tél: <strong>71 289 077</strong></p>
-                    <p>Service Technico Commercial: <strong>71 289 114 </strong>
-                    </p>
-                    <p>Email: <strong>soteq.projet@gmail.com</strong>
+                  Siège: 12 rue d'Irak lafayette-1002 Tunis
+                    <br>
+                    GSM: +216 28 100 018
+                    <br>
+                    Tél: 71 289 077
+                    <br>
+                    Service Technico Commercial: 71 289 114
+                    <br>
+                    Email: soteq.projet@gmail.com
                     </p>
 
                 </div>
@@ -72,12 +69,14 @@
         </div>
 
         <div class="row">
-            <div class="box">
+            <div >
                 <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Contact <strong>form</strong>
-                    </h2>
-                    <hr>
+
+                  <br><br><br>
+
+                    <h1 class="text-center" ><span style="color: #CD5C5C;font-family: 'Sansita' ">Contactez Nous</span></h1>
+<br><br><br>
+
                     <form action="" method="post" role="form" class="contactForm">
                         <div class="row">
                             <div class="form-group col-lg-4">
@@ -110,7 +109,7 @@
                             <div class="form-group col-lg-12">
                                 <input type="hidden" name="save" value="contact">
                                 <p style="text-align: center;">
-                                    <button class="btn btn-primary ">Send Message</button>
+                                    <button class="btn btn-primary " style="background-color:#CD5C5C">Send Message</button>
                                 </p>
                             </div>
                         </div>
@@ -121,16 +120,6 @@
 
     </div>
 
-{##}
-{#        <footer>#}
-{#        <div class="container">#}
-{#            <div class="row">#}
-{#                <div class="col-lg-12 text-center">#}
-{#                    <p style="font-size: 13px">Copyright &copy; <b>SOTEQ </b>2017. All right reserved.#}
-{#</p>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#        </footer>#}
+
 
 {% endblock content %}
