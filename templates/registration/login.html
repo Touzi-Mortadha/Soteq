@@ -1,36 +1,29 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-{% block navbar %}
-    <li><a href='{% url "signup" %}'><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-    <li><a href='{% url "login" %}'><span class="glyphicon glyphicon-log-in"></span>
-        Login</a></li>
+{% block esp %}
+<br><br><br>
+
 {% endblock %}
 
-
 {% block content %}
-   <div class="container">
-        <div>
-            <br><br><br>
-            <div class="w3-container w3-teal">
-                <h1 style="text-align: center;"><strong>Societé Tunisienne D'équipement</strong></h1>
-            </div>
-            <br> <br>
-        </div>
-   </div>
-    <div id="content-container" class="container p-none">
-        <div class="lgn-container col-md-8">
+<center>
+<br><br><br>
+<h1 class="text-center" ><span style="color: #CD5C5C;font-family: 'Sansita' ">Log in</span></h1>
+<br>
+     <div id="content-container" class="container p-none">
+        <div class="lgn-container col-md-12">
             <form id="login-form" method="post"
                   action="{% url 'login' %}">
                 {% csrf_token %}
                 <table class="table">
                     <tr>
-                        <td><label for="id_username">Username</label></td>
+                        <td align="center"><label for="id_username">Username</label></td>
                         <td><input id="id_username" name="username"
                                    type="text" class="form-control"></td>
                     </tr>
                     <tr>
-                        <td><label for="id_password">Password</label></td>
+                        <td align="center"><label for="id_password">Password</label></td>
                         <td><input id="id_password" name="password"
                                    type="password" class="form-control"></td>
                     </tr>
@@ -42,11 +35,13 @@
                     </p>
                 {% endif %}
                 <input type="submit" value="Login"
-                       class="btn btn-primary pull-right" />
+                       class="btn btn-primary pull-right" style='background-color:#CD5C5C' />
                 <input type="hidden" name="next" value="{{ next }}" />
             </form>
         </div>
     </div>
+
+  </center>
 {% endblock content %}
 
 
