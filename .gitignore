@@ -1,6 +1,6 @@
 soteq/__pycache__/*
 Soteq_project/__pycache__/*
-soteq/migrations/__pycache__/*
+soteq/migrations/*
 db.sqlite3
 .idea/
 soteq/templatetags/__pycache__/*

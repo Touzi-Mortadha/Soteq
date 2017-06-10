@@ -4,5 +4,5 @@ from .models import *
 
 admin.site.register(Produit)
 admin.site.register(categorie)
-admin.site.register(user)
+admin.site.register(UserProfile)
 admin.site.register(Projet)
