@@ -1,11 +1,12 @@
 from .models import *
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.sites.shortcuts import get_current_site
 from .other_function import *
 from django.views.generic import TemplateView,ListView
+from django.views import View
 from django.utils.encoding import force_bytes, force_text
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.template.loader import render_to_string
@@ -52,9 +53,12 @@ class produit_detail_view(TemplateView):
         return context
 
 
-def signup(request):
-    if request.method == 'POST':
-        form = SignUpForm(request.POST)
+class signup(View):
+    form_class = SignUpForm
+    template_name = 'signup.html'
+    initial = {'key': 'value'}
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
             user.is_active = False
@@ -72,9 +76,12 @@ def signup(request):
             email = EmailMessage(subject, message, to=[toemail])
             email.send()
             return redirect('account_activation_sent')
-    else:
-        form = SignUpForm()
-    return render(request, 'signup.html', {'form': form})
+        return render(request, self.template_name, {'form': form})
+
+    def get(self, request, *args, **kwargs):
+        form = self.form_class()
+        return render(request, self.template_name, {'form': form})
+
 
 
 def activate(request, uidb64, token):

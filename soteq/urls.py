@@ -11,7 +11,7 @@ urlpatterns = [
     url(r'^produits', views.produits_view.as_view(),name='produits'),
     url(r'^SAV', views.SAV_view.as_view(),name='SAV'),
     url(r'^prod/(?P<id>\d+)/$',views.produit_detail_view.as_view(),name='detail'),
-    url(r'^signup/$',views.signup, name='signup'),
+    url(r'^signup/$',views.signup.as_view(), name='signup'),
     url(r'^account_activation_sent/$',views.account_activation_sent, name='account_activation_sent'),
     url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
         views.activate, name='activate'),
