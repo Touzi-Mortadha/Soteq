@@ -10,9 +10,11 @@ from django.views import View
 from django.utils.encoding import force_bytes, force_text
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.template.loader import render_to_string
-from .forms import SignUpForm
+from .forms import SignUpForm, ContactForm
 from .tokens import account_activation_token
 from django.core.mail import EmailMessage
+from django.template import Context
+from django.template.loader import get_template
 
 
 
@@ -39,10 +41,6 @@ class SAV_view(TemplateView):
     template_name = "SAV.html"
 
 
-class contact_view(TemplateView):
-    template_name = "contact_us.html"
-
-
 
 class produit_detail_view(TemplateView):
     template_name = "produit_detail.html"
@@ -56,7 +54,6 @@ class produit_detail_view(TemplateView):
 class signup(View):
     form_class = SignUpForm
     template_name = 'signup.html'
-    initial = {'key': 'value'}
     def post(self, request, *args, **kwargs):
         form = self.form_class(request.POST)
         if form.is_valid():
@@ -101,8 +98,40 @@ def activate(request, uidb64, token):
         return render(request, 'account_activation_invalid.html')
 
 
-#class account_activation_sent(TemplateView):
-#    template_name = "account_activation_sent.html"
-
 def account_activation_sent(request):
     return render(request, 'account_activation_sent.html')
+
+class contact_view(View):
+    form_class = ContactForm
+    template_name = 'contact_us.html'
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST)
+        if form.is_valid():
+            contact_name = request.POST.get('contact_name', '')
+            contact_last_name = request.POST.get('contact_last_name', '')
+            contact_email = request.POST.get('contact_email', '')
+            form_content = request.POST.get('content', '')
+
+
+            template = get_template('contact_template.txt')
+            context = {
+                'contact_name': contact_name,
+                'contact_last_name': contact_last_name,
+                'contact_email': contact_email,
+                'form_content': form_content,
+            }
+            content = template.render(context)
+
+            email = EmailMessage(
+                "Soteq a reçu un nouveau message",
+                content,
+                "Your website" +'',
+                ['soteqapp@gmail.com'],
+                headers = {'Reply-To': contact_email }
+            )
+            email.send()
+            return redirect('contact')
+        return render(request, self.template_name, {'form': form})
+    def get(self, request, *args, **kwargs):
+        form = self.form_class()
+        return render(request, self.template_name, {'form': form})
