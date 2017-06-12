@@ -8,18 +8,18 @@
 {% block style %}
     <style>
         legend {
-            color: #141823;
+            color: #CD5C5C;
             font-size: 25px;
             font-weight: bold;
         }
 
         .signup-btn {
-            background: #79bc64;
-            background-image: -webkit-linear-gradient(top, #79bc64, #578843);
-            background-image: -moz-linear-gradient(top, #79bc64, #578843);
-            background-image: -ms-linear-gradient(top, #79bc64, #578843);
-            background-image: -o-linear-gradient(top, #79bc64, #578843);
-            background-image: linear-gradient(to bottom, #79bc64, #578843);
+            background: #CD5C5C;
+            background-image: -webkit-linear-gradient(top, #CD5C5C, #CD5C5C);
+            background-image: -moz-linear-gradient(top, #CD5C5C, #CD5C5C);
+            background-image: -ms-linear-gradient(top, #CD5C5C, #CD5C5C);
+            background-image: -o-linear-gradient(top, #CD5C5C, #CD5C5C);
+            background-image: linear-gradient(to bottom, #CD5C5C, #CD5C5C);
             -webkit-border-radius: 4;
             -moz-border-radius: 4;
             border-radius: 4px;
@@ -70,10 +70,21 @@
 {% endblock %}
 
 {% block content %}
-    </br></br></br></br></br></br></br></br></br>
+    <div class="container">
+    <div class="row">
+
+      <h1 class="text-center" ><span style="color: #CD5C5C;font-family: 'Sansita' ">Sign up</span></h1>
+      <br><br><br>
+          </div
+          <div class="row">
+              <div class="col-sm-offset-1 col-sm-2">
+              </div>
+              <div class="col-sm-6">
+
     <form method="post">
        {% csrf_token %}
       {% for field in form %}
+<div class="fieldWrapper">
            <p>
               {{ field.label_tag }}<br>
                 {{ field }}
@@ -84,43 +95,18 @@
                     <p style="color: red">{{ error }}</p>
                 {% endfor %}
             </p>
+          </div>
         {% endfor %}
-        <button type="submit">Sign up</button>
+        <button type="submit" class="btn btn-lg btn-primary btn-block signup-btn"  style='background-color:#CD5C5C' >Sign up</button>
     </form>
 
-<!--
-
-    <div class="container">
-    <div class="row">
-
-      <h1 class="text-center" ><span style="color: #CD5C5C;font-family: 'Sansita' ">Sign up</span></h1>
-
-
-<br><br><br>
-    </div
-    <div class="row">
-        <div class="col-sm-offset-1 col-sm-2">
-        </div>
-        <div class="col-sm-6">
-            <form action="" method="POST" accept-charset="utf-8" class="form" role="form"> {% csrf_token %}
-                <div class="row">
-                    <div class="col-xs-6 col-md-6">
-                        <input type="text" name="username" value="" class="form-control input-lg" placeholder="username"  />                        </div>
-                    <div class="col-xs-6 col-md-6">
-                        <input type="text" name="last_name" value="" class="form-control input-lg" placeholder="Last Name"  />                        </div>
-                </div>
-                <input type="text" name="email" value="" class="form-control input-lg" placeholder="Your Email"  /><input type="password" name="password" value="" class="form-control input-lg" placeholder="Password"  />
-                <input type="password" name="confirm_password" value="" class="form-control input-lg" placeholder="Confirm Password"  />
-
-                <button class="btn btn-lg btn-primary btn-block signup-btn" type="submit" style='background-color:#CD5C5C'>Create my account</button>
-            </form>
-        </div>
-      </div>
-    </div>
+</div>
+</div>
 </div>
 
+</div>
+<br><br><br><br><br><br><br><br><br>
 
 
--->
 
 {% endblock %}
