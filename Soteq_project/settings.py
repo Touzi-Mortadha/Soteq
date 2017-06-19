@@ -134,7 +134,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media_cdn")
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
-DEFAULT_EMAIL_FROM = ''
+DEFAULT_EMAIL_FROM = 'soteqapp@gmail.com'
 DEFAULT_EMAIL_BCC = ''
 SERVER_EMAIL = ''
 

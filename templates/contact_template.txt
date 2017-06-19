@@ -1,0 +1,18 @@
+
+Soteq a reçu un message de la part de :
+
+Nom:
+
+{{ contact_name }}
+
+Prénom:
+
+{{ contact_last_name }}
+
+Email:
+
+{{ contact_email }}
+
+Contenu du message:
+
+{{ form_content|safe|striptags }}
