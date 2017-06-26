@@ -1,0 +1,17 @@
+Soumission de ojet de la part de :
+
+Nom:
+
+{{ name }}
+
+Prénom:
+
+{{ last_name }}
+
+Email:
+
+{{ email }}
+
+Description du projet:
+
+{{ form_description|safe|striptags }}

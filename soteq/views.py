@@ -10,7 +10,7 @@ from django.views import View
 from django.utils.encoding import force_bytes, force_text
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.template.loader import render_to_string
-from .forms import SignUpForm, ContactForm
+from .forms import *
 from .tokens import account_activation_token
 from django.core.mail import EmailMessage
 from django.template import Context
@@ -34,8 +34,8 @@ class produits_view(ListView):
     paginate_by = 8
 
 
-class projects_view(TemplateView):
-    template_name = "projects.html"
+#class projects_view(TemplateView):
+#    template_name = "projects.html"
 
 class SAV_view(TemplateView):
     template_name = "SAV.html"
@@ -131,6 +131,43 @@ class contact_view(View):
             )
             email.send()
             return redirect('contact')
+        return render(request, self.template_name, {'form': form})
+    def get(self, request, *args, **kwargs):
+        form = self.form_class()
+        return render(request, self.template_name, {'form': form})
+
+
+
+class project_view(View):
+    form_class = ProjectForm
+    template_name = 'projects.html'
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST)
+        if form.is_valid():
+            name = request.POST.get('name', '')
+            last_name = request.POST.get('last_name', '')
+            email = request.POST.get('email', '')
+            description = request.POST.get('description', '')
+
+
+            template = get_template('project_template.txt')
+            context = {
+                'name': name,
+                'last_name':last_name,
+                'email': email,
+                'form_description': description,
+            }
+            content = template.render(context)
+
+            email = EmailMessage(
+                "Soteq a reçu un nouveau projet",
+                content,
+                "Your website" +'',
+                ['soteqapp@gmail.com'],
+                headers = {'Reply-To': email }
+            )
+            email.send()
+            return redirect('projet')
         return render(request, self.template_name, {'form': form})
     def get(self, request, *args, **kwargs):
         form = self.form_class()

@@ -30,3 +30,20 @@ class ContactForm(forms.Form):
         self.fields['contact_last_name'].label = "Votre Prénom:"
         self.fields['contact_email'].label = "Votre Mail:"
         self.fields['content'].label = "Laissez votre message:"
+
+
+class ProjectForm(forms.Form):
+    name = forms.CharField(required=True)
+    last_name = forms.CharField(required=True)
+    email = forms.EmailField(required=True)
+    description = forms.CharField(required=True, widget=forms.Textarea)
+    def __init__(self, *args, **kwargs):
+        super(ProjectForm, self).__init__(*args, **kwargs)
+        self.fields['name'].label = "Votre Nom:"
+        self.fields['last_name'].label = "Votre Prénom:"
+        self.fields['email'].label = "Votre Mail:"
+        self.fields['description'].label = "Laissez une description de votre projet:"
+        self.fields['name'].widget.attrs.update({'class' : 'form-control form-group col-lg-12'})
+        self.fields['last_name'].widget.attrs.update({'class' : 'form-control form-group col-lg-12'})
+        self.fields['email'].widget.attrs.update({'class' : 'form-control form-group col-lg-12'})
+        self.fields['description'].widget.attrs.update({'class' : 'form-control form-group col-lg-12'})
