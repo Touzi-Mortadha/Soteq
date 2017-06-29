@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block esp %}
+<br><br><br>
+
+{% endblock %}
+
+
+{% block content %}
+<h1>hi</h1>
+    <ul>
+    {% for item in result %}
+    <li>{{ item.nom_produit }}</li>
+    {% endfor %}
+    </ul>
+
+{% endblock content %}

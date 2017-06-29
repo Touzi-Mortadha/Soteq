@@ -8,11 +8,10 @@ def recherche(query):
         Q(description__icontains=query) |
         Q(categorie__icontains=query)
     ).distinct()
-    queryset_list2 = Projet.objects.filter(
-        Q(nom_projet__icontains=query)
-    ).distinct()
+    # queryset_list2 = Projet.objects.filter(
+    #     Q(nom_projet__icontains=query)
+    # ).distinct()
     # queryset_list2 = chain(queryset_list1,queryset_list2)
-
     return queryset_list1
 
 def is_connected(request):
