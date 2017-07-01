@@ -5,53 +5,76 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOTEQ</title>
+    <title>{% block title %}SOTEQ{% endblock %}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href='{% static "css/footer.css" %}'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
-      <link href='{% static "css/acceuil/accueil.css" %}' rel="stylesheet">
+    <link href='{% static "css/acceuil/accueil.css" %}' rel="stylesheet">
 
 
-      <style>
- html, body{
+    <style>
+        html, body {
 
-    font-family: 'Sansita', sans-serif;
-    }
+            font-family: 'Sansita', sans-serif;
+        }
 
-    footer {background-color:#222222;}
-        .copyright { min-height:40px; background-color:#222222;}
-         .copyright p { text-align:left; color:#FFF; padding:10px 0; margin-bottom:0px;}
-         .bottom_ul { list-style-type:none; float:right; margin-bottom:0px;}
+        footer {
+            background-color: #222222;
+        }
 
+        .copyright {
+            min-height: 40px;
+            background-color: #222222;
+        }
 
-         .video-section .pattern-overlay {
-     background-color:white;
-     padding: 20px 0 20px;
-     min-height: 20px;
-     /* Incase of overlay problems just increase the min-height*/
-     }
-     .video-section h1, .video-section h3{
-     text-align:center;
-     color:      #CD5C5C;
-     }
-     .video-section h1{
-     font-size:50px;
-     font-family:  fantasy;
-     font-weight:bold;
-     text-transform: uppercase;
-     margin: 40px auto 0px;
-     text-shadow: 1px 1px 1px #000;
-     -webkit-text-shadow: 1px 1px 1px #000;
-     -moz-text-shadow: 1px 1px 1px #000;
-     }
+        .copyright p {
+            text-align: left;
+            color: #FFF;
+            padding: 10px 0;
+            margin-bottom: 0px;
+        }
 
-     .video-section .buttonBar{display:none;}
-.player {font-size: 1px;}
+        .bottom_ul {
+            list-style-type: none;
+            float: right;
+            margin-bottom: 0px;
+        }
 
-</style>
+        .video-section .pattern-overlay {
+            background-color: white;
+            padding: 20px 0 20px;
+            min-height: 20px;
+            /* Incase of overlay problems just increase the min-height*/
+        }
+
+        .video-section h1, .video-section h3 {
+            text-align: center;
+            color: #CD5C5C;
+        }
+
+        .video-section h1 {
+            font-size: 50px;
+            font-family: fantasy;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 40px auto 0px;
+            text-shadow: 1px 1px 1px #000;
+            -webkit-text-shadow: 1px 1px 1px #000;
+            -moz-text-shadow: 1px 1px 1px #000;
+        }
+
+        .video-section .buttonBar {
+            display: none;
+        }
+
+        .player {
+            font-size: 1px;
+        }
+
+    </style>
 
     {% block style %}
     {% endblock %}
@@ -69,7 +92,7 @@
                 <span class="icon-bar"></span>
 
             </button>
-            <a class="navbar-brand" href="#">SOTEQ</a>
+            <a class="navbar-brand" href='{% url "index" %}'>SOTEQ</a>
         </div>
 
         <div class="collapse navbar-collapse" id="myNavbar">
@@ -111,16 +134,16 @@
             <ul class="nav navbar-nav navbar-right">
                 {% block navbar %}
 
-                {% if user.is_authenticated %}
-                <li><a href="#" class="btn btn-primary1" title="voir panier">
-                <li><a href='{% url "logout" %}'><span class="glyphicon glyphicon-log-in"></span>Logout</a>
-                </li>
-              <!--  <li><a href="#"><span class="fa fa-shopping-cart"></span> &nbsp;0 produit(s)</a></li> -->
-                {% else %}
-                <li><a href='{% url "signup" %}'><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href='{% url "login" %}'><span class="glyphicon glyphicon-log-in"></span>
-                    Login</a></li>
-                {% endif %}
+                    {% if user.is_authenticated %}
+                        <li><a href="#" class="btn btn-primary1" title="voir panier">
+                        <li><a href='{% url "logout" %}'><span class="glyphicon glyphicon-log-in"></span>Logout</a>
+                        </li>
+                        <!--  <li><a href="#"><span class="fa fa-shopping-cart"></span> &nbsp;0 produit(s)</a></li> -->
+                    {% else %}
+                        <li><a href='{% url "signup" %}'><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href='{% url "login" %}'><span class="glyphicon glyphicon-log-in"></span>
+                            Login</a></li>
+                    {% endif %}
 
                 {% endblock %}
             </ul>
@@ -136,11 +159,11 @@
 {% endblock %}
 <section class="content-section video-section">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-       <h1> <img src='{% static "img/soteq.jpg" %}'>Societé Tunisienne D'équipement</h1>
-       </div>
-      </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 style="color:#FF8C00"><img src='{% static "img/soteq.jpg" %}'>Societé Tunisienne D'équipement</h1>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -161,7 +184,6 @@ FOOTER
 
 
 -->
-
 
 
 </body>

@@ -5,34 +5,33 @@
     <link href='{% static "css/acceuil/story.css" %}' rel='stylesheet' type='text/css'>
     <link href='{% static "css/acceuil/accueil.css" %}' rel="stylesheet">
     <link href='{% static "css/acceuil/presentation.css" %}' rel="stylesheet">
-<link href='http://fonts.googleapis.com/css?family=Buenard:700' rel='stylesheet' type='text/css'>
-<script src="http://pupunzi.com/mb.components/mb.YTPlayer/demo/inc/jquery.mb.YTPlayer.js"></script>
-      <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Buenard:700' rel='stylesheet' type='text/css'>
+    <script src="http://pupunzi.com/mb.components/mb.YTPlayer/demo/inc/jquery.mb.YTPlayer.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
 
     <style type="text/css">
 
 
+        .ch-img-1 {
+            background-image: url('{% static "img/story.jpeg" %}');
+        }
+
+        .ch-img-2 {
+            background-image: url('{% static "img/story.jpeg" %}');
+        }
+
+        .ch-img-3 {
+            background-image: url('{% static "img/story.jpeg" %}');
+        }
+
+        .ch-img-4 {
+            background-image: url('{% static "img/story.jpeg" %}');
+        }
 
 
-
-
-.ch-img-1 {
-	background-image: url('{% static "img/story.jpeg" %}');
-}
-.ch-img-2 {
-	background-image: url('{% static "img/story.jpeg" %}');
-}
-.ch-img-3 {
-	background-image: url('{% static "img/story.jpeg" %}');
-}
-.ch-img-4{
-	background-image: url('{% static "img/story.jpeg" %}');
-}
-
-
-</style>
+    </style>
 
 
 {% endblock %}
@@ -43,6 +42,10 @@
         document.getElementById("ind").classList.add("active");
     </script>
 {% endblock %}
+{% block title %}
+    acceuil
+{% endblock %}
+
 {% block content %}
 
 
@@ -50,178 +53,228 @@
 
 
 
-        <section class="slide-wrapper">
+    <section class="slide-wrapper">
         <div class="container">
-            <div id="myCarousel" class="carousel slide">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
                     <li data-target="#myCarousel" data-slide-to="2"></li>
-                 </ol>
+                </ol>
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
-                    <div class="item item1 active">
-                        <div class="fill" style=" background-color:#48c3af;">
-                            <div class="inner-content">
-                                <div class="carousel-img">
-                                    <img src='{% static "img/index/1.png" %}' alt="sofa" class="img img-responsive" />
-                                </div>
-                                <div class="carousel-desc">
-
-                                    <h2>Modern Designer Sofa</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit ipsum, scelerisque non semper eu, aliquet vel odio. Sed auctor id purus nec tristique. Donec euismod, urna vel dapibus tristique, dolor arcu ultrices lectus, nec pulvinar est turpis sit amet felis. Duis interdum purus quam, vitae cursus erat ornare at. Donec congue mi a ipsum tincidunt, imperdiet vehicula odio rutrum. Nam porta vulputate magna, id pretium lectus iaculis eu. Ut ut viverra libero.</p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item item2">
-                        <div class="fill" style="background-color:#b33f4a;">
-                            <div class="inner-content">
-                                <div class="carousel-img">
-                                    <img src='{% static "img/index/2.png" %}' alt="white-sofa" class="img img-responsive" />
-                                </div>
-                                <div class="carousel-desc">
-
-                                    <h2>Vintage Style Sofa</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit ipsum, scelerisque non semper eu, aliquet vel odio. Sed auctor id purus nec tristique. Donec euismod, urna vel dapibus tristique, dolor arcu ultrices lectus, nec pulvinar est turpis sit amet felis. Duis interdum purus quam, vitae cursus erat ornare at. Donec congue mi a ipsum tincidunt, imperdiet vehicula odio rutrum. Nam porta vulputate magna, id pretium lectus iaculis eu. Ut ut viverra libero.</p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item item3">
-                        <div class="fill" style="background-color:#7fc2f4;">
-                            <div class="inner-content">
-                                <div class="col-md-6">
-
-                                    <div class="carousel-img">
-                                        <img src='{% static "img/index/3.png" %}' alt="sofa" class="img img-responsive" />
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6 text-left">
-                                    <div class="carousel-desc">
-
-                                        <h2>Stylish Sofa</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit ipsum, scelerisque non semper eu, aliquet vel odio. Sed auctor id purus nec tristique. Donec euismod, urna vel dapibus tristique, dolor arcu ultrices lectus, nec pulvinar est turpis sit amet felis. Duis interdum purus quam, vitae cursus erat ornare at. Donec congue mi a ipsum tincidunt, imperdiet vehicula odio rutrum. Nam porta vulputate magna, id pretium lectus iaculis eu. Ut ut viverra libero.</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="item active">
+                        <img src="la.jpg" alt="Los Angeles">
                     </div>
 
+                    <div class="item">
+                        <img src="chicago.jpg" alt="Chicago">
+                    </div>
+
+                    <div class="item">
+                        <img src="ny.jpg" alt="New York">
+                    </div>
                 </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
+
+            {#            <div id="myCarousel" class="carousel slide">#}
+            {#                <!-- Indicators -->#}
+            {#                <ol class="carousel-indicators">#}
+            {#                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>#}
+            {#                    <li data-target="#myCarousel" data-slide-to="1"></li>#}
+            {#                    <li data-target="#myCarousel" data-slide-to="2"></li>#}
+            {#                 </ol>#}
+            {##}
+            {#                <!-- Wrapper for slides -->#}
+            {#                <div class="carousel-inner">#}
+            {#                    <div class="item item1 active">#}
+            {#                        <div class="fill" style=" background-color:#48c3af;">#}
+            {#                            <div class="inner-content">#}
+            {#                                <div class="carousel-img">#}
+            {#                                    <img src='{% static "img/index/1.png" %}' alt="sofa" class="img img-responsive" />#}
+            {#                                </div>#}
+            {#                                <div class="carousel-desc">#}
+            {##}
+            {#                                    <h2>Modern Designer Sofa</h2>#}
+            {#                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit ipsum, scelerisque non semper eu, aliquet vel odio. Sed auctor id purus nec tristique. Donec euismod, urna vel dapibus tristique, dolor arcu ultrices lectus, nec pulvinar est turpis sit amet felis. Duis interdum purus quam, vitae cursus erat ornare at. Donec congue mi a ipsum tincidunt, imperdiet vehicula odio rutrum. Nam porta vulputate magna, id pretium lectus iaculis eu. Ut ut viverra libero.</p>#}
+            {##}
+            {#                                </div>#}
+            {#                            </div>#}
+            {#                        </div>#}
+            {#                    </div>#}
+            {#                    <div class="item item2">#}
+            {#                        <div class="fill" style="background-color:#b33f4a;">#}
+            {#                            <div class="inner-content">#}
+            {#                                <div class="carousel-img">#}
+            {#                                    <img src='{% static "img/index/2.png" %}' alt="white-sofa" class="img img-responsive" />#}
+            {#                                </div>#}
+            {#                                <div class="carousel-desc">#}
+            {##}
+            {#                                    <h2>Vintage Style Sofa</h2>#}
+            {#                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit ipsum, scelerisque non semper eu, aliquet vel odio. Sed auctor id purus nec tristique. Donec euismod, urna vel dapibus tristique, dolor arcu ultrices lectus, nec pulvinar est turpis sit amet felis. Duis interdum purus quam, vitae cursus erat ornare at. Donec congue mi a ipsum tincidunt, imperdiet vehicula odio rutrum. Nam porta vulputate magna, id pretium lectus iaculis eu. Ut ut viverra libero.</p>#}
+            {##}
+            {#                                </div>#}
+            {#                            </div>#}
+            {#                        </div>#}
+            {#                    </div>#}
+            {#                    <div class="item item3">#}
+            {#                        <div class="fill" style="background-color:#7fc2f4;">#}
+            {#                            <div class="inner-content">#}
+            {#                                <div class="col-md-6">#}
+            {##}
+            {#                                    <div class="carousel-img">#}
+            {#                                        <img src='{% static "img/index/3.png" %}' alt="sofa" class="img img-responsive" />#}
+            {#                                    </div>#}
+            {#                                </div>#}
+            {##}
+            {#                                <div class="col-md-6 text-left">#}
+            {#                                    <div class="carousel-desc">#}
+            {##}
+            {#                                        <h2>Stylish Sofa</h2>#}
+            {#                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis elit ipsum, scelerisque non semper eu, aliquet vel odio. Sed auctor id purus nec tristique. Donec euismod, urna vel dapibus tristique, dolor arcu ultrices lectus, nec pulvinar est turpis sit amet felis. Duis interdum purus quam, vitae cursus erat ornare at. Donec congue mi a ipsum tincidunt, imperdiet vehicula odio rutrum. Nam porta vulputate magna, id pretium lectus iaculis eu. Ut ut viverra libero.</p>#}
+            {##}
+            {#                                    </div>#}
+            {#                                </div>#}
+            {#                            </div>#}
+            {#                        </div>#}
+            {#                    </div>#}
+            {##}
+            {#                </div>#}
+            {#            </div>#}
         </div>
     </section>
 
     <div class="container">
-<div class="row">
-<h1 class="text-center" s><a href="http://bootstraptema.ru/stuff/snippets_bootstrap/blocks/shutters_blocks/17-1-0-1894" target="_blank"><span style="color:     #CD5C5C ">Presentation</span></a></h1>
-<div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <div class="box">
-                <div class="box-icon">
-                    <span ><img src='{% static "img/soteq.jpg" %}'></span>
-                </div>
-                <div class="info">
-                    <h4 class="text-center">
-Qui sommes nous ?</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis dolor soluta!</p>
-                    <a href='{% url "contact" %}' class="btn">Link</a>
+    <h1 class="text-center" s><a
+            href="http://bootstraptema.ru/stuff/snippets_bootstrap/blocks/shutters_blocks/17-1-0-1894"
+            target="_blank"><span style="color:     #CD5C5C ">Presentation</span></a></h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="box">
+                    <div class="box-icon">
+                        <span><img src='{% static "img/soteq.jpg" %}'></span>
+                    </div>
+                    <div class="info">
+                        <h4 class="text-center">
+                            Qui sommes nous ?</h4>
+                        <p><b>SOTEQ SARL</b> : est une société spécialisée dans la vente et la
+                            commercialisation des équipements et des machines industrielles telles que
+                            les équipements de recyclage (broyeur, densificateur, extrudeuse à pipe,
+                            unité de lavage PET, PP et PE, unité de fabrication des sachets en plastiques
+                            etc. .....) Vente d’équipements d’emballage, les machines de sculpture sur
+                            bois (CNC Router), les machines d’injection plastique, matériels de
+                            boulangerie, restauration ...Etc</p>
+                        <a href='{% url "contact" %}' class="btn">Link</a>
+                    </div>
                 </div>
             </div>
-        </div>
-         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-            <div class="box">
-                <div class="box-icon">
-                    <span ><img src='{% static "img/soteq.jpg" %}'></span>
-                </div>
-                <div class="info">
-                    <h4 class="text-center">Nos produits</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam aspernatur corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi dolorem architecto perferendis quas aperiam debitis dolor soluta!</p>
-                    <a href='{% url "produits" %}' class="btn">Link</a>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="box">
+                    <div class="box-icon">
+                        <span><img src='{% static "img/soteq.jpg" %}'></span>
+                    </div>
+                    <div class="info">
+                        <h4 class="text-center">Nos produits</h4>
+                        <p>Vente tout équipements de recyclage de plastiques (broyeur a plastique, densificateur,
+                            granuleuse, affuteuse, balance ...)
+                            station de lavage PET, sacheterie, unité d’emballage en carton ,machine de fabrication de
+                            goublets en carton,
+                            unité de fabrication de carrelage, unité de fabrication de charbon,
+                            unité de fabrication de bargataire ... </p>
+                        </br><br>
+                        <a href='{% url "produits" %}' class="btn">Link</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
     <br>
-<h1 class="text-center"><a href="http://bootstraptema.ru/stuff/snippets_bootstrap/blocks/shutters_blocks/17-1-0-1894" target="_blank"><span style="color:     #CD5C5C ">Success stories</span></a></h1>
+    <h1 class="text-center"><a
+            href="http://bootstraptema.ru/stuff/snippets_bootstrap/blocks/shutters_blocks/17-1-0-1894"
+            target="_blank"><span style="color:     #CD5C5C ">Success stories</span></a></h1>
 
-<ul class="ch-grid">
-                    <li>
-                        <div class="ch-item ch-img-1">
-                            <div class="ch-info-wrap">
-                                <div class="ch-info">
-                                    <div class="ch-info-front ch-img-1"></div>
-                                    <div class="ch-info-back">
-                                        <h4>story</h4>
-                                        <p>Lorem ipsum #1</p>
-                                    </div>
-                                </div>
-                            </div>
+    <ul class="ch-grid">
+        <li>
+            <div class="ch-item ch-img-1">
+                <div class="ch-info-wrap">
+                    <div class="ch-info">
+                        <div class="ch-info-front ch-img-1"></div>
+                        <div class="ch-info-back">
+                            <h4>story</h4>
+                            <p>Lorem ipsum #1</p>
                         </div>
-                    </li>
+                    </div>
+                </div>
+            </div>
+        </li>
 
-                    <li>
-                        <div class="ch-item ch-img-2">
-                            <div class="ch-info-wrap">
-                                <div class="ch-info">
-                                    <div class="ch-info-front ch-img-2"></div>
-                                    <div class="ch-info-back">
-                                        <h4>story</h4>
-                                        <p>Lorem ipsum #2</p>
-                                    </div>
-                                </div>
-                            </div>
+        <li>
+            <div class="ch-item ch-img-2">
+                <div class="ch-info-wrap">
+                    <div class="ch-info">
+                        <div class="ch-info-front ch-img-2"></div>
+                        <div class="ch-info-back">
+                            <h4>story</h4>
+                            <p>Lorem ipsum #2</p>
                         </div>
-                    </li>
+                    </div>
+                </div>
+            </div>
+        </li>
 
-                    <li>
-                        <div class="ch-item ch-img-3">
-                            <div class="ch-info-wrap">
-                                <div class="ch-info">
-                                    <div class="ch-info-front ch-img-3"></div>
-                                    <div class="ch-info-back">
-                                        <h4>story</h4>
-                                        <p>Lorem ipsum #3</p>
-                                    </div>
-                                </div>
-                            </div>
+        <li>
+            <div class="ch-item ch-img-3">
+                <div class="ch-info-wrap">
+                    <div class="ch-info">
+                        <div class="ch-info-front ch-img-3"></div>
+                        <div class="ch-info-back">
+                            <h4>story</h4>
+                            <p><a href='{% url "story_1" %}'>Lorem ipsum #3</a></p>
                         </div>
-                    </li>
+                    </div>
+                </div>
+            </div>
+        </li>
 
-                    <li>
-                        <div class="ch-item ch-img-4">
-                            <div class="ch-info-wrap">
-                                <div class="ch-info">
-                                    <div class="ch-info-front ch-img-4"></div>
-                                    <div class="ch-info-back">
-                                      <h4>story</h4>
-                                        <p>Lorem ipsum #4</p>
-                                    </div>
-                                </div>
-                            </div>
+        <li>
+            <div class="ch-item ch-img-4">
+                <div class="ch-info-wrap">
+                    <div class="ch-info">
+                        <div class="ch-info-front ch-img-4"></div>
+                        <div class="ch-info-back">
+                            <h4>story</h4>
+                            <p>Lorem ipsum #4</p>
                         </div>
-                    </li>
+                    </div>
+                </div>
+            </div>
+        </li>
 
-</ul>
+    </ul>
 
 
-</br></br>
-<footer>
-<div class="copyright">
-<div class="container col-md-6">
-<p>Copyright © SOTEQ 2017. All right reserved.</p>
-</div>
-</div>
-</footer>
+    </br></br>
+    <footer>
+        <div class="copyright">
+            <div class="container col-md-6">
+                <p>Copyright © SOTEQ 2017. All right reserved.</p>
+            </div>
+        </div>
+    </footer>
 
 {% endblock content %}

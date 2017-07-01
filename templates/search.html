@@ -1,18 +1,168 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load self_defined_filters %}
 
 {% block esp %}
-<br><br><br>
+    <br><br><br>
+
+{% endblock %}
+
+{% block script %}
+    <script>
+        document.getElementById("prod").classList.add("active");
+    </script>
+
 
 {% endblock %}
 
 
+{% block style %}
+    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href='{% static "css/bootstrap.css" %}' rel="stylesheet">
+    <link href='{% static "css/boot-business_produit.css" %}' rel="stylesheet">
+
+    <style>
+        html, body {
+            font-family: 'Sansita', sans-serif;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%)
+        }
+
+        .imgContainer:hover .middle {
+            opacity: 1;
+        }
+
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .imgContainer:hover .image {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+            opacity: 0.3;
+        }
+    </style>
+{% endblock %}
+
+{% block title %}
+    recherche
+{% endblock %}
+
+
+
+
 {% block content %}
-<h1>hi</h1>
-    <ul>
-    {% for item in result %}
-    <li>{{ item.nom_produit }}</li>
-    {% endfor %}
-    </ul>
+    <br><br>
+
+    <div class="container">
+
+
+        <div class="w3-container">
+            <center>
+                <p> Vente tout équipements de recyclage de plastiques (broyeur a plastique, densificateur, granuleuse,
+                    affuteuse, balance ...)
+                    <br>station de lavage PET, sacheterie, unité d’emballage en carton ,machine
+                    de fabrication de goublets en carton,
+                    <br>unité de fabrication de carrelage, unité de fabrication de charbon,
+                    <br>unité de
+                    fabrication de bargataire (ligne de production des pipes PEHD),
+                    <br>extraction des
+                    huiles essentielles ,matériels de confection ,boulangerie ,restauration et
+                    pâtisserie ... </p>
+            </center>
+
+            <!-- Start: MAIN CONTENT -->
+
+            <div class="page-header">
+                <br>
+
+                <h1 style="color: #3b6e22"><span style="color: #CD5C5C;font-family: 'Sansita' ">Recherche:  </span>{{ search }}</h1>
+
+            </div>
+            <div class="row">
+                {% for obj in result %}
+                    <div class="col-md-3">
+                        <div class="thumbnail" style="background: 	 	#F0F8FF">
+                            <div class="imgContainer hover01 column">
+                                <a href={{ obj.images0.url }} class="image">
+                                    <img src={{ obj.images0.url }} alt="product" class="productImg">
+                                </a>
+                                <div class="middle">
+                                    <a href={{ obj.images0.url }}>
+                                        <button type="button" class="btn btn-success">View</button>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="caption">
+                                <h6 style="color:#008080"><b><a href={{ obj.get_absolute_url }}> {{ obj.nom_produit }}</a></b></h6>
+                                <p>
+                                    {{ obj.description|linebreaks|truncatechars:50 }}
+                                </p>
+                            </div>
+                            <p>
+                            <div class=" widget-footer col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+                                <div role="group" aria-label="...">
+                                    <!--  <button class="btn btn-primary btn-md"><a href="#" style="font-size: 10px"><b>add to cart &nbsp;<span class="fa fa-shopping-cart"></span></b></a>&nbsp;
+                                    </button> -->
+                                    <center><a
+                                            href={{ obj.get_absolute_url }}
+                                                    style="font-size: 10px">
+                                        <button class="btn  btn-md"><b>Read more</b></button>
+                                        </a> </center>
+                                </div>
+                            </div>
+                            </p>
+                        </div>
+
+                    </div>
+                {% endfor %}
+
+                {# .... **Now the pagination section** .... #}
+                <div class="center">
+                    {% if is_paginated %}
+                        <div class="pagination">
+                          <span class="step-links">
+                            <span class="page-links">
+                                {% if page_obj.has_previous %}
+                                    <a href="/produits?page={{ page_obj.previous_page_number }}">&laquo;</a>
+                                {% endif %}
+
+                                {% for i in page_obj.paginator.num_pages|iternum %}
+                                    {% if forloop.counter ==  page_obj.number %}
+                                        <a href="#" class="active">{{ forloop.counter }}</a>
+                                    {% else %}
+                                        <a href="/produits?page= {{ forloop.counter }} ">{{ forloop.counter }}</a>
+                                    {% endif %}
+                                {% endfor %}
+
+                                {% if page_obj.has_next %}
+                                    <a href="/produits?page={{ page_obj.next_page_number }}">&raquo;</a>
+                                {% endif %}
+                            </span>
+                          </span>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
 
 {% endblock content %}

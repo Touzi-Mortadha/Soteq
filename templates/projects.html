@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block esp %}
-<br><br><br>
+    <br>
+
+{% endblock %}
+
+{% block script %}
+    <script>
+        document.getElementById("proj").classList.add("active");
+    </script>
+
 
 {% endblock %}
 
@@ -10,57 +18,75 @@
     <link href='{% static "css/acceuil/presentation.css" %}' rel="stylesheet">
 {% endblock %}
 
+{% block title %}
+    projets
+{% endblock %}
+
+
 {% block content %}
 
 
 
 
-<br><br><br>
-<br><br><br>
+    <br><br><br>
+    <br><br><br>
 
-<div class="container">
-
+    <div class="container">
 
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div>
                     <div class="box-icon">
-                        <span ><img src='{% static "img/soteq.jpg" %}'></span>
+                        <span><img src='{% static "img/soteq.jpg" %}'></span>
                     </div>
                     <div class="info">
-  <h1 class="text-center" ><span style="color: #CD5C5C;font-family: 'Sansita' ">Des projets qu'on a réalisé</span></h1>
-    <br><br><br>
+                        <h1 class="text-center"><span style="color: #CD5C5C;font-family: 'Sansita' ">Projets réalisé</span>
+                        </h1>
+                        <br><br><br>
 
-    <center>
-    <ul class="list-group">
-                <li class="list-group-item list-group-item-warning">confection cuivre et textile</li>
-                <li class="list-group-item list-group-item-warning">moulin</li>
-                <li class="list-group-item list-group-item-warning">tout type de menuiserie</li>
-                <li class="list-group-item list-group-item-warning">recyclage de plastique</li>
-                <li class="list-group-item list-group-item-warning">unité de formage de tôle</li>
-                 <li class="list-group-item list-group-item-warning">chaîne de production aliment poisson</li>
-                <li class="list-group-item list-group-item-warning">chaîne de production aliment Bétail</li>
-                <li class="list-group-item list-group-item-warning">Unité de fabrication de charbon</li>
-                 <li class="list-group-item list-group-item-warning">marbrerie</li>
-                <li class="list-group-item list-group-item-warning">machine de fabrication de glace alimentaire</li>
-                <li class="list-group-item list-group-item-warning">unité de presse à tomate séchée</li>
-                <li class="list-group-item list-group-item-warning">unité de fabrication de sachet en plastique</li>
-                <li class="list-group-item list-group-item-warning">unité de broyage et de recyclage d'aluminium</li>
-                 <li class="list-group-item list-group-item-warning">unité de recyclage de déchet textile</li>
-                <li class="list-group-item list-group-item-warning">tôlerie et mécanique</li>
-                <li class="list-group-item list-group-item-warning">matériels géophysiques</li>
-                 <li class="list-group-item list-group-item-warning">unité de mise en bouteille</li>
-                <li class="list-group-item list-group-item-warning">unité cosmétique et détergents</li>
-                 <li class="list-group-item list-group-item-warning">station de lavage automatique</li>
-                <li class="list-group-item list-group-item-warning">nettoyage à sec et buanderie</li>
-                <li class="list-group-item list-group-item-warning">boulangerie et pâtisserie</li>
-                <li class="list-group-item list-group-item-warning">tour mécanique et fraiseuse</li>
-                <li class="list-group-item list-group-item-warning">vulcanisateur et réparation des roues</li>
-                <li class="list-group-item list-group-item-warning">unité de traitement des eaux</li>
-            </ul>
-    </center>
-
+                        <center>
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-warning">confection cuivre et textile</li>
+                                <li class="list-group-item list-group-item-warning">moulin</li>
+                                <li class="list-group-item list-group-item-warning">tout type de menuiserie</li>
+                                <li class="list-group-item list-group-item-warning">recyclage de plastique</li>
+                                <li class="list-group-item list-group-item-warning">unité de formage de tôle</li>
+                                <li class="list-group-item list-group-item-warning">chaîne de production aliment
+                                    poisson
+                                </li>
+                                <li class="list-group-item list-group-item-warning">chaîne de production aliment
+                                    Bétail
+                                </li>
+                                <li class="list-group-item list-group-item-warning">Unité de fabrication de charbon</li>
+                                <li class="list-group-item list-group-item-warning">marbrerie</li>
+                                <li class="list-group-item list-group-item-warning">machine de fabrication de glace
+                                    alimentaire
+                                </li>
+                                <li class="list-group-item list-group-item-warning">unité de presse à tomate séchée</li>
+                                <li class="list-group-item list-group-item-warning">unité de fabrication de sachet en
+                                    plastique
+                                </li>
+                                <li class="list-group-item list-group-item-warning">unité de broyage et de recyclage
+                                    d'aluminium
+                                </li>
+                                <li class="list-group-item list-group-item-warning">unité de recyclage de déchet
+                                    textile
+                                </li>
+                                <li class="list-group-item list-group-item-warning">tôlerie et mécanique</li>
+                                <li class="list-group-item list-group-item-warning">matériels géophysiques</li>
+                                <li class="list-group-item list-group-item-warning">unité de mise en bouteille</li>
+                                <li class="list-group-item list-group-item-warning">unité cosmétique et détergents</li>
+                                <li class="list-group-item list-group-item-warning">station de lavage automatique</li>
+                                <li class="list-group-item list-group-item-warning">nettoyage à sec et buanderie</li>
+                                <li class="list-group-item list-group-item-warning">boulangerie et pâtisserie</li>
+                                <li class="list-group-item list-group-item-warning">tour mécanique et fraiseuse</li>
+                                <li class="list-group-item list-group-item-warning">vulcanisateur et réparation des
+                                    roues
+                                </li>
+                                <li class="list-group-item list-group-item-warning">unité de traitement des eaux</li>
+                            </ul>
+                        </center>
 
 
                     </div>
@@ -70,64 +96,63 @@
         </div>
 
 
-
-
-<br><br><br><br><br>
+        <br><br><br><br><br>
 
         <div class="row">
             <div class="col-sm-offset-1 col-sm-2">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-        <form method="post">
-        {% csrf_token %}
+                <form method="post">
+                    {% csrf_token %}
 
-        {% for field in form %}
-        {% if field.name == 'description' %}
-        <div class="form-group col-lg-12">
-        <div class="fieldWrapper">
-         <p>
-            {{ field.label_tag }}<br>
-              {{ field }}
-                      {% if field.help_text %}
-                        <small style="color: grey">{{ field.help_text }}</small>
-                      {% endif %}
-              {% for error in field.errors %}
-                  <p style="color: red">{{ error }}</p>
-              {% endfor %}
-          </p>
+                    {% for field in form %}
+                        {% if field.name == 'description' %}
+                            <div class="form-group col-lg-12">
+                                <div class="fieldWrapper">
+                                    <p>
+                                        {{ field.label_tag }}<br>
+                                        {{ field }}
+                                        {% if field.help_text %}
+                                            <small style="color: grey">{{ field.help_text }}</small>
+                                        {% endif %}
+                                        {% for error in field.errors %}
+                                            <p style="color: red">{{ error }}</p>
+                                        {% endfor %}
+                                    </p>
+                                </div>
+                            </div>
+                        {% else %}
+
+                            <div class="form-group col-lg-4">
+                                <div class="fieldWrapper">
+                                    <p>
+                                        {{ field.label_tag }}<br>
+                                        {{ field }}
+                                        {% if field.help_text %}
+                                            <small style="color: grey">{{ field.help_text }}</small>
+                                        {% endif %}
+                                        {% for error in field.errors %}
+                                            <p style="color: red">{{ error }}</p>
+                                        {% endfor %}
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        {% endif %}
+                    {% endfor %}
+
+                    <button type="submit" class="btn btn-lg btn-primary btn-block signup-btn"
+                            style='background-color:#CD5C5C'>Soumettre
+                    </button>
+                </form>
+
+            </div>
         </div>
-      </div>
-      {% else %}
-
-      <div class="form-group col-lg-4">
-      <div class="fieldWrapper">
-       <p>
-          {{ field.label_tag }}<br>
-            {{ field }}
-                    {% if field.help_text %}
-                      <small style="color: grey">{{ field.help_text }}</small>
-                    {% endif %}
-            {% for error in field.errors %}
-                <p style="color: red">{{ error }}</p>
-            {% endfor %}
-        </p>
-      </div>
-      </div>
 
 
-      {% endif %}
-        {% endfor %}
-
-        <button type="submit" class="btn btn-lg btn-primary btn-block signup-btn"  style='background-color:#CD5C5C' >Soumettre</button>
-        </form>
-
-        </div>
-        </div>
-
-
-<br><br><br>
-
+        <br><br><br>
 
 
     </div>

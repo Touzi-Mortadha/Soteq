@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block title %}
+    Story
+{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href='{% static "css/success_story.css" %}'>
+    <style type="text/css">
+
+        .vid {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .vid iframe,
+        .vid object,
+        .vid embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+
+    <style type="text/css">
+
+
+        .video-section .pattern-overlay {
+            background-color: #F5FFFA;
+            padding: 30px 0 30px;
+
+            /* Incase of overlay problems just increase the min-height*/
+        }
+
+        .video-section h1, .video-section h3 {
+            text-align: center;
+            color: teal;
+        }
+
+        .video-section h1 {
+            font-size: 40px;
+            font-family: fantasy;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 40px auto 0px;
+            text-shadow: 1px 1px 1px #000;
+            -webkit-text-shadow: 1px 1px 1px #000;
+            -moz-text-shadow: 1px 1px 1px #000;
+        }
+
+        .video-section .buttonBar {
+            display: none;
+        }
+
+        .player {
+            font-size: 1px;
+        }
+    </style>
+{% endblock %}
+
+{% block esp %}
+    <br><br><br>
+
+{% endblock %}
+
+{% block content %}
+
+    <hr>
+    <h1 style="text-align: center;font-size: 40px;font-family:  fantasy;"><b> Name of succes story </b></h1>
+    <hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <br><br><br><br><br><br><br><br> <br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br>
+
+                <aside class="profile-card">
+                    <header>
+                        <!-- here’s the avatar -->
+                        <a target="_blank" ">
+                        <img src='{% static "img/story/logo.png" %}' class="hoverZoomLink" width="150px">
+                        </a>
+                        <!-- the username -->
+                        <h1>
+                            <b>Success Story</b>
+                        </h1>
+
+                        <!-- and role or location -->
+                        <h2>
+                            Story
+                        </h2>
+
+                    </header>
+
+                    <!-- bit of a bio; who are you? -->
+                    <div class="profile-bio">
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti atque, tenetur quam
+                            aspernatur corporis at explicabo nulla dolore necessitatibus doloremque exercitationem sequi
+                            dolorem architecto perferendis quas aperiam debitis dolor soluta!
+                        </p>
+
+                    </div>
+
+                    <!-- some social links to show off -->
+                    <ul class="profile-social-links">
+                        <li>
+                            <a target="_blank" href="https://www.facebook.com/creativedonut">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://twitter.com/dropyourbass">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://github.com/vipulsaxena">
+                                <i class="fa fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.behance.net/vipulsaxena">
+
+                                <i class="fa fa-behance"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+
+
+            </div><!--.col -->
+
+            <div class="col-md-8">
+                <div class="vid">
+                    <video loop poster='{% static "img/story/loading.jpg" %}' id='background'>
+                        <source src="" type="video/mp4">
+                    </video>
+                </div><!--./vid -->
+
+            </div><!--.col -->
+
+        </div><!--./row -->
+
+    </div><!--./container -->
+
+{% endblock %}

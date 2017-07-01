@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block esp %}
-<br><br><br>
+    <br><br><br>
 
 {% endblock %}
 {% block script %}
@@ -30,14 +30,20 @@
     <link href='{% static "css/body.css" %}' rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
-      <style>
- html, body{
+    <style>
+        html, body {
 
-    font-family: 'Sansita', sans-serif;
-    }
-</style>
+            font-family: 'Sansita', sans-serif;
+        }
+    </style>
 
 {% endblock %}
+
+
+{% block title %}
+    produit
+{% endblock %}
+
 
 {% block content %}
 
@@ -50,172 +56,172 @@
 
 
     <div class="page-header">
-        <div class="content">
+    <div class="content">
 
 
-            <div class="container">
-                <div zclass="w3-main" id="main">
-                    <br>
-                    <div class="w3-teal">
+    <div class="container">
+        <div zclass="w3-main" id="main">
+            <br>
+            <div class="w3-teal">
+
+            </div>
+            <br>
+
+            <div class="container-fliud">
+                <div class="wrapper row">
+                    <div class="preview col-md-6">
+
+                        <div class="preview-pic tab-content">
+                            <div class="tab-pane active" id="pic-1"><img src='{{ instance.images0.url }}'/>
+                            </div>
+                            {% if instance.images1 %}
+                                <div class="tab-pane" id="pic-2"><img src='{{ instance.images1.url }}'/></div>
+                            {% endif %}
+                            {% if instance.images2 %}
+                                <div class="tab-pane" id="pic-3"><img src='{{ instance.images2.url }}'/></div>
+                            {% endif %}
+                            {% if instance.images3 %}
+                                <div class="tab-pane" id="pic-4"><img src='{{ instance.images3.url }}'/></div>
+                            {% endif %}
+                            {% if instance.images4 %}
+                                <div class="tab-pane" id="pic-5"><img src='{{ instance.images4.url }}'/></div>
+                            {% endif %}
+                        </div>
+                        <ul class="preview-thumbnail nav nav-tabs">
+                            <li class="active"><a data-target="#pic-1" data-toggle="tab"><img
+                                    src='{{ instance.images0.url }}'/></a></li>
+                            {% if instance.images1 %}
+                                <li><a data-target="#pic-2" data-toggle="tab"><img
+                                        src='{{ instance.images1.url }}'/></a></li>
+                            {% endif %}
+                            {% if instance.images2 %}
+                                <li><a data-target="#pic-3" data-toggle="tab"><img
+                                        src='{{ instance.images2.url }}'/></a></li>
+                            {% endif %}
+                            {% if instance.images3 %}
+                                <li><a data-target="#pic-4" data-toggle="tab"><img
+                                        src='{{ instance.images3.url }}'/></a></li>
+                            {% endif %}
+                            {% if instance.images4 %}
+                                <li><a data-target="#pic-5" data-toggle="tab"><img
+                                        src='{{ instance.images4.url }}'/></a></li>
+                            {% endif %}
+                        </ul>
 
                     </div>
-                    <br>
-
-                    <div class="container-fliud">
-                        <div class="wrapper row">
-                            <div class="preview col-md-6">
-
-                                <div class="preview-pic tab-content">
-                                    <div class="tab-pane active" id="pic-1"><img src='{{ instance.images0.url }}'/>
-                                    </div>
-                                    {% if instance.images1 %}
-                                        <div class="tab-pane" id="pic-2"><img src='{{ instance.images1.url }}'/></div>
-                                    {% endif %}
-                                    {% if instance.images2 %}
-                                        <div class="tab-pane" id="pic-3"><img src='{{ instance.images2.url }}'/></div>
-                                    {% endif %}
-                                    {% if instance.images3 %}
-                                        <div class="tab-pane" id="pic-4"><img src='{{ instance.images3.url }}'/></div>
-                                    {% endif %}
-                                    {% if instance.images4 %}
-                                        <div class="tab-pane" id="pic-5"><img src='{{ instance.images4.url }}'/></div>
-                                    {% endif %}
-                                </div>
-                                <ul class="preview-thumbnail nav nav-tabs">
-                                    <li class="active"><a data-target="#pic-1" data-toggle="tab"><img
-                                            src='{{ instance.images0.url }}'/></a></li>
-                                    {% if instance.images1 %}
-                                        <li><a data-target="#pic-2" data-toggle="tab"><img
-                                                src='{{ instance.images1.url }}'/></a></li>
-                                    {% endif %}
-                                    {% if instance.images2 %}
-                                        <li><a data-target="#pic-3" data-toggle="tab"><img
-                                                src='{{ instance.images2.url }}'/></a></li>
-                                    {% endif %}
-                                    {% if instance.images3 %}
-                                        <li><a data-target="#pic-4" data-toggle="tab"><img
-                                                src='{{ instance.images3.url }}'/></a></li>
-                                    {% endif %}
-                                    {% if instance.images4 %}
-                                        <li><a data-target="#pic-5" data-toggle="tab"><img
-                                                src='{{ instance.images4.url }}'/></a></li>
-                                    {% endif %}
-                                </ul>
-
+                    <div class="details col-md-6">
+                        <h3 class="product-title">{{ instance.nom_produit }}</h3>
+                        <div class="rating">
+                            <div class="stars">
+                                {% for i in "xxxxx" %}
+                                    {#                      {% if instance.cheked = "true" %}#}
+                                    {#                        <span class="fa fa-star checked"></span>#}
+                                    {#                      {% else %}#}
+                                    <span class="fa fa-star"></span>
+                                    {#                      {% endif %}#}
+                                {% endfor %}
                             </div>
-                            <div class="details col-md-6">
-                                <h3 class="product-title">{{ instance.nom_produit }}</h3>
-                                <div class="rating">
-                                    <div class="stars">
-                                        {% for i in "xxxxx" %}
-                                            {#                      {% if instance.cheked = "true" %}#}
-                                            {#                        <span class="fa fa-star checked"></span>#}
-                                            {#                      {% else %}#}
-                                            <span class="fa fa-star"></span>
-                                            {#                      {% endif %}#}
-                                        {% endfor %}
-                                    </div>
-                                    {#              <span class="review-no">41 reviews</span>#}
-                                </div>
+                            {#              <span class="review-no">41 reviews</span>#}
+                        </div>
 
-                                <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu
-                                    laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu
-                                    delectus posuere.</p>
-                                <hr>
-                                <h4 class="price">current price: <span>${{ instance.prix }}</span></h4>
-                                <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
-                                    votes)</strong></p>
+                        <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu
+                            laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu
+                            delectus posuere.</p>
+                        <hr>
+                        <h4 class="price">current price: <span>${{ instance.prix }}</span></h4>
+                        <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87
+                            votes)</strong></p>
 
-                                </h5>
-                                <div class="action">
-                                    <button class="add-to-cart btn btn-default" type="button">add to cart</button>
-                                    <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span>
-                                    </button>
-                                </div>
-                            </div>
+                        </h5>
+                        <div class="action">
+                            <button class="add-to-cart btn btn-default" type="button">add to cart</button>
+                            <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span>
+                            </button>
                         </div>
                     </div>
-                    <br>
-                    <!--
-                    <div class="container-fluid">
-                        <div class="col-md-12 product-info">
-                            <ul id="myTab" class="nav nav-tabs nav_tabs">
+                </div>
+            </div>
+            <br>
+            <!--
+            <div class="container-fluid">
+                <div class="col-md-12 product-info">
+                    <ul id="myTab" class="nav nav-tabs nav_tabs">
 
-                                <li class="active"><a href="#service-one" data-toggle="tab">DESCRIPTION</a></li>
-                                <li><a href="#service-two" data-toggle="tab">PRODUCT INFO</a></li>
-                                <li><a href="#service-three" data-toggle="tab">REVIEWS</a></li>
+                        <li class="active"><a href="#service-one" data-toggle="tab">DESCRIPTION</a></li>
+                        <li><a href="#service-two" data-toggle="tab">PRODUCT INFO</a></li>
+                        <li><a href="#service-three" data-toggle="tab">REVIEWS</a></li>
 
-                            </ul>
-                            <div id="myTabContent" class="tab-content">
-                                <div class="tab-pane fade in active" id="service-one">
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade in active" id="service-one">
 
-                                    <section class="container product-info">
-                                        The Corsair Gaming Series GS600 power supply is the ideal price-performance
-                                        solution for building or upgrading a Gaming PC. A single +12V rail provides up
-                                        to 48A of reliable, continuous power for multi-core gaming PCs with multiple
-                                        graphics cards. The ultra-quiet, dual ball-bearing fan automatically adjusts its
-                                        speed according to temperature, so it will never intrude on your music and
-                                        games. Blue LEDs bathe the transparent fan blades in a cool glow. Not feeling
-                                        blue? You can turn off the lighting with the press of a button.
+                            <section class="container product-info">
+                                The Corsair Gaming Series GS600 power supply is the ideal price-performance
+                                solution for building or upgrading a Gaming PC. A single +12V rail provides up
+                                to 48A of reliable, continuous power for multi-core gaming PCs with multiple
+                                graphics cards. The ultra-quiet, dual ball-bearing fan automatically adjusts its
+                                speed according to temperature, so it will never intrude on your music and
+                                games. Blue LEDs bathe the transparent fan blades in a cool glow. Not feeling
+                                blue? You can turn off the lighting with the press of a button.
 
-                                        <h3>Corsair Gaming Series GS600 Features:</h3>
-                                        <li>It supports the latest ATX12V v2.3 standard and is backward compatible with
-                                            ATX12V 2.2 and ATX12V 2.01 systems
-                                        </li>
-                                        <li>An ultra-quiet 140mm double ball-bearing fan delivers great airflow at an
-                                            very low noise level by varying fan speed in response to temperature
-                                        </li>
-                                        <li>80Plus certified to deliver 80% efficiency or higher at normal load
-                                            conditions (20% to 100% load)
-                                        </li>
-                                        <li>0.99 Active Power Factor Correction provides clean and reliable power</li>
-                                        <li>Universal AC input from 90~264V — no more hassle of flipping that tiny red
-                                            switch to select the voltage input!
-                                        </li>
-                                        <li>Extra long fully-sleeved cables support full tower chassis</li>
-                                        <li>A three year warranty and lifetime access to Corsair’s legendary technical
-                                            support and customer service
-                                        </li>
-                                        <li>Over Current/Voltage/Power Protection, Under Voltage Protection and Short
-                                            Circuit Protection provide complete component safety
-                                        </li>
-                                        <li>Dimensions: 150mm(W) x 86mm(H) x 160mm(L)</li>
-                                        <li>MTBF: 100,000 hours</li>
-                                        <li>Safety Approvals: UL, CUL, CE, CB, FCC Class B, TÜV, CCC, C-tick</li>
-                                    </section>
+                                <h3>Corsair Gaming Series GS600 Features:</h3>
+                                <li>It supports the latest ATX12V v2.3 standard and is backward compatible with
+                                    ATX12V 2.2 and ATX12V 2.01 systems
+                                </li>
+                                <li>An ultra-quiet 140mm double ball-bearing fan delivers great airflow at an
+                                    very low noise level by varying fan speed in response to temperature
+                                </li>
+                                <li>80Plus certified to deliver 80% efficiency or higher at normal load
+                                    conditions (20% to 100% load)
+                                </li>
+                                <li>0.99 Active Power Factor Correction provides clean and reliable power</li>
+                                <li>Universal AC input from 90~264V — no more hassle of flipping that tiny red
+                                    switch to select the voltage input!
+                                </li>
+                                <li>Extra long fully-sleeved cables support full tower chassis</li>
+                                <li>A three year warranty and lifetime access to Corsair’s legendary technical
+                                    support and customer service
+                                </li>
+                                <li>Over Current/Voltage/Power Protection, Under Voltage Protection and Short
+                                    Circuit Protection provide complete component safety
+                                </li>
+                                <li>Dimensions: 150mm(W) x 86mm(H) x 160mm(L)</li>
+                                <li>MTBF: 100,000 hours</li>
+                                <li>Safety Approvals: UL, CUL, CE, CB, FCC Class B, TÜV, CCC, C-tick</li>
+                            </section>
 
-                                </div>
-                                <div class="tab-pane fade" id="service-two">
+                        </div>
+                        <div class="tab-pane fade" id="service-two">
 
-                                    <section class="container">
+                            <section class="container">
 
-                                    </section>
+                            </section>
 
-                                </div>
-                                <div class="tab-pane fade" id="service-three">
+                        </div>
+                        <div class="tab-pane fade" id="service-three">
 
-                                </div>
-                            </div>
-                            <hr>
                         </div>
                     </div>
-
--->
+                    <hr>
                 </div>
             </div>
 
-            <script>
-                function w3_open() {
-                    document.getElementById("main").style.marginLeft = "25%";
-                    document.getElementById("mySidebar").style.width = "25%";
-                    document.getElementById("mySidebar").style.display = "block";
-                    document.getElementById("openNav").style.display = 'none';
-                }
-                function w3_close() {
-                    document.getElementById("main").style.marginLeft = "0%";
-                    document.getElementById("mySidebar").style.display = "none";
-                    document.getElementById("openNav").style.display = "inline-block";
-                }
-            </script>
+-->
+        </div>
+    </div>
+
+    <script>
+        function w3_open() {
+            document.getElementById("main").style.marginLeft = "25%";
+            document.getElementById("mySidebar").style.width = "25%";
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("openNav").style.display = 'none';
+        }
+        function w3_close() {
+            document.getElementById("main").style.marginLeft = "0%";
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("openNav").style.display = "inline-block";
+        }
+    </script>
 
 {% endblock %}

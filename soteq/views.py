@@ -170,16 +170,25 @@ class project_view(View):
         form = self.form_class()
         return render(request, self.template_name, {'form': form})
 
+
 class search_view(View):
     template_name = 'search.html'
 
     def post(self, request, *args, **kwargs):
         query = request.POST.get('content')
-        result=recherche(query)
-        return render(request, self.template_name,{'result':result} )
-
+        result = recherche(query)
+        return render(request, self.template_name, {'result': result,'search': query})
 
         return render(request, self.template_name)
-    def get(self, request, *args, **kwargs):
-        form = self.form_class()
-        return render(request, self.template_name,)
+    #
+    # def get(self, request, *args, **kwargs):
+    #     form = self.form_class()
+    #     return render(request, self.template_name, )
+
+
+class story_view_1(TemplateView):
+    template_name = "story_1.html"
+
+
+class story_view_2(TemplateView):
+    template_name = "story_2.html"
