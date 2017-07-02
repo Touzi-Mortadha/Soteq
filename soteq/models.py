@@ -13,7 +13,7 @@ def upload_location(instance, filename):
 
 
 class Produit(models.Model):
-    id_produit = models.AutoField(primary_key=True)
+    id_produit = models.IntegerField(primary_key=True)
     categorie = models.CharField(max_length=100)
     nom_produit = models.CharField(max_length=100)
     prix = models.DecimalField(max_digits=10, decimal_places=2)

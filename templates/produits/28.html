@@ -1,0 +1,82 @@
+{% load static %}
+
+<div class="container-fluid">
+    <div class="col-md-12 product-info">
+        <ul id="myTab" class="nav nav-tabs nav_tabs">
+
+            <li class="active"><a href="#service-one" data-toggle="tab">DESCRIPTION</a></li>
+            <li><a href="#service-two" data-toggle="tab">PRODUCT INFO</a></li>
+
+
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="service-one">
+
+                <section class="container product-info" style="font-size:20px">
+                    <br>
+                    Cette unité à une capacité de production qui varie entre 4-6
+                    par minute,
+                    avec une puissance motrice de 9.25 KW et une taille de<br> produit fini qui varie entre
+                    300* 300 et 400* 400
+                </section>
+
+            </div>
+            <div class="tab-pane fade" id="service-two">
+
+                <section class="container">
+                    <br>
+                    <p>Elle se compose de :</p>
+                    <table>
+
+                        <tr>
+                            <td> Elévateur à
+                                godets
+                            </td>
+                            <td><img src='{% static "img/prod/a.png" %}'></td>
+
+                        </tr>
+                        <tr>
+                            <td> Mélangeur</td>
+                            <td><img src='{% static "img/prod/b.png" %}'></td>
+
+                        </tr>
+                        <tr>
+                            <td> Alimentateur
+                                Constant
+                            </td>
+                            <td><img src='{% static "img/prod/c.png" %}'></td>
+
+                        </tr>
+                        <tr>
+                            <td> Machine de
+                                moulage
+                            </td>
+                            <td><img src='{% static "img/prod/d.png" %}'></td>
+
+                        </tr>
+                        <tr>
+                            <td> Moule</td>
+                            <td><img src='{% static "img/prod/e.png" %}'></td>
+
+                        </tr>
+                        <tr>
+                            <td>Polisseuse avec
+                                station hydraulique
+                            </td>
+                            <td><img src='{% static "img/prod/f.png" %}'></td>
+
+                        </tr>
+                        <tr>
+                            <td> Produit finis</td>
+                            <td><img src='{% static "img/prod/g.png" %}'></td>
+
+                        </tr>
+                    </table>
+                </section>
+
+            </div>
+
+        </div>
+        <hr>
+    </div>
+</div>

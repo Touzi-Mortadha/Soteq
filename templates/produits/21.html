@@ -1,0 +1,29 @@
+{% load static %}
+<div class="container-fluid">
+    <div class="col-md-12 product-info">
+        <ul id="myTab" class="nav nav-tabs nav_tabs">
+
+            <li class="active"><a href="#service-one" data-toggle="tab">DESCRIPTION</a></li>
+
+
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="service-one">
+
+                <section class="container product-info" style="font-size:20px">
+                    <br>
+                    Le produit fini peut prendre plusieurs formes :
+                    <br><br><b>*Charbon pressé : ce modèle de produit fini nécessite une presse</b>
+                    <img src='{% static "img/prod/img1.png" %}'>
+                    <br><b>*Charbon non pressé : ce modèle de produit fini nécessite une
+                    extrudeuse</b>
+                    <img src='{% static "img/prod/img2.png" %}'>
+                </section>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</div>

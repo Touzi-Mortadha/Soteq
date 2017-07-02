@@ -39,10 +39,10 @@ class SAV_view(TemplateView):
 
 class produit_detail_view(TemplateView):
     template_name = "produit_detail.html"
-
     def get_context_data(self, **kwargs):
         context = super(produit_detail_view, self).get_context_data(**kwargs)
         context['instance'] = get_object_or_404(Produit, id_produit=self.kwargs['id'])
+        context['id'] = self.kwargs['id']
         return context
 
 
@@ -177,13 +177,13 @@ class search_view(View):
     def post(self, request, *args, **kwargs):
         query = request.POST.get('content')
         result = recherche(query)
-        return render(request, self.template_name, {'result': result,'search': query})
+        return render(request, self.template_name, {'result': result, 'search': query})
 
-        return render(request, self.template_name)
-    #
-    # def get(self, request, *args, **kwargs):
-    #     form = self.form_class()
-    #     return render(request, self.template_name, )
+        # return render(request, self.template_name)
+        #
+        # def get(self, request, *args, **kwargs):
+        #     form = self.form_class()
+        #     return render(request, self.template_name, )
 
 
 class story_view_1(TemplateView):
