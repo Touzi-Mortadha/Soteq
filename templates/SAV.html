@@ -9,11 +9,192 @@
     SAV
 {% endblock %}
 
+
+{% block style %}
+
+
+    <link href='{% static "css/acceuil/SAV.css" %}' rel="stylesheet">
+
+
+    <style>
+  .video-section .pattern-overlay {
+background-color:          #F5FFFA   ;
+padding: 30px 0 30px;
+
+/* Incase of overlay problems just increase the min-height*/
+}
+.video-section h1, .video-section h3{
+text-align:center;
+color:teal;
+}
+.video-section h1{
+font-size:40px;
+font-family:  fantasy;
+font-weight:bold;
+text-transform: uppercase;
+margin: 40px auto 0px;
+text-shadow: 1px 1px 1px #000;
+-webkit-text-shadow: 1px 1px 1px #000;
+-moz-text-shadow: 1px 1px 1px #000;
+}
+
+.video-section .buttonBar{display:none;}
+.player {font-size: 1px;}
+
+/*Author: Kosmom.ru*/.loading,.loading>td,.loading>th,.nav li.loading.active>a,.pagination li.loading,.pagination>li.active.loading>a,.pager>li.loading>a{
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+    background-size: 40px 40px;
+animation: 2s linear 0s normal none infinite progress-bar-stripes;
+-webkit-animation: progress-bar-stripes 2s linear infinite;
+}
+.btn.btn-default.loading,input[type="text"].loading,select.loading,textarea.loading,.well.loading,.list-group-item.loading,.pagination>li.active.loading>a,.pager>li.loading>a{
+background-image: linear-gradient(45deg, rgba(235, 235, 235, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(235, 235, 235, 0.15) 50%, rgba(235, 235, 235, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+}
+.destacados{
+    padding: 20px 0;
+  text-align: center;
+}
+.destacados > div > div{
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.destacados > div:hover > div{
+  margin-top: -10px;
+  border: 1px solid rgb(200, 200, 200);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+  background: rgba(200, 200, 200, 0.1);
+  transition: 0.5s;
+}
+
+body.modal-open #wrap{
+    -webkit-filter: blur(7px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+}
+
+.modal-backdrop {background: #f7f7f7;}
+
+.close {
+    font-size: 50px;
+    display:block;
+}
+
+</style>
+
+{% endblock %}
+
+
+
 {% block script %}
     <script>
         document.getElementById("sav").classList.add("active");
     </script>
 {% endblock %}
 {% block content %}
+
+    <hr>
+    <h1 style="text-align: center;font-size: 40px;font-family:  fantasy;"><b> Service Aprés Vente</b></h1>
+    <hr>
+    <br>
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"/>
+    <div class="container">
+    <div class="well" style="background:white;border-width: 3px;border-color:black">
+        <div class="media">
+            <a class="pull-left">
+                <img class="media-object" src='{% static "img/SAV/1.jpg" %}' width="200px">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading"></h4>
+
+                <p style="font-size: 21px"><br>Si vous avez un problème avec l’un de nos machines vous pouvez nous
+                    contacter par téléphone au <b>71908636</b>
+                    <br>De 08 :30h à 17h30 ou envoyer un email à l’adresse suivante :
+                    <b>Soteq.projet@topnet.tn.</b>
+                    <br> Un chargé clientèle s’engage à vous contacter dans les deux heures qui suivent afin de vous
+                    aider à le résoudre .</p>
+
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="container">
+                <div class="row destacados">
+
+
+                    <div class="col-md-4">
+                        <div>
+                            <img src='{% static "img/SAV/1.png" %}' alt="securekart" class="img-rounded img-thumbnail">
+                            <h4> Contactez-nous </h4>
+                            <p>Vous avez une question ?
+                                Nous sommes là pour vous.</p>
+                            <a href='{% url "contact" %}' class="btn btn-success loading">Contactez-nous</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div>
+                            <img src='{% static "img/SAV/3.png" %}' alt="securekart" class="img-rounded img-thumbnail">
+                            <h4> Les réseaux sociaux</h4>
+
+                            <p>Rejoignez –nous sur facebook /you tube /made in tunisia</p>
+
+                            <a class="btn btn-success loading">Rejoignez-nous</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div>
+                            <img src='{% static "img/SAV/2.png" %}' alt="securekart" class="img-rounded img-thumbnail">
+                            <h4> Nos Agences</h4>
+                            <p></p>
+
+                            <div id="wrap" class="text-center">
+                                <!-- Button trigger modal -->
+                                <br>
+                                <button class="btn btn-success loading" data-toggle="modal" data-target="#myModal">
+                                    Retrouvez-nos-agencese
+                                </button>
+                            </div>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+                                 aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3"
+                                             style="background:url('{% static "img/SAV/bg1.jpg" %}');text-align: left">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                ×
+                                            </button>
+                                            <br><br>
+                                            <h2><b>*Soteq Sarl Siège Mont plaisir : 71908636</b></h2>
+                                            <h2><b>*Soteq Sarl agence Sousse : 73278690</b></h2>
+                                            <h2><b>*Soteq Sarl agence Kasserine : 77411894</b></h2>
+                                            <h2><b>*Soteq Sarl agence Sidi Bouzid : 76626423</b></h2>
+                                            <h2><b>*Soteq Sarl agence Gabes : 75279258</b></h2>
+                                            <br><br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 
 {% endblock content %}
